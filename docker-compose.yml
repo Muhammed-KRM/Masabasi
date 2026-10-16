@@ -1,0 +1,87 @@
+services:
+  # ============================================================================
+  # 1. PostgreSQL 17 Veritabanı
+  # ============================================================================
+  postgres:
+    image: postgres:17-alpine
+    container_name: masabasi-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: masabasi_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_masabasi_secret_2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d masabasi_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - masabasi-network
+
+  # ============================================================================
+  # 2. .NET 10 Web API (Clean Architecture Backend)
+  # ============================================================================
+  masabasi-api:
+    build:
+      context: .
+      dockerfile: src/Masabasi.API/Dockerfile
+    container_name: masabasi-api
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=masabasi_db;Username=postgres;Password=postgres_masabasi_secret_2026"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    networks:
+      - masabasi-network
+
+  # ============================================================================
+  # 3. Angular 20/21 Hybrid SSR/SSG Frontend Servisi
+  # ============================================================================
+  masabasi-frontend-ssr:
+    build:
+      context: src/Masabasi.Frontend
+      dockerfile: Dockerfile
+    container_name: masabasi-frontend-ssr
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+    depends_on:
+      - masabasi-api
+    ports:
+      - "4000:4000"
+    networks:
+      - masabasi-network
+
+  # ============================================================================
+  # 4. Nginx Reverse Proxy (Mikro-Önbellek & Trafik İzolasyonu)
+  # ============================================================================
+  masabasi-nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    container_name: masabasi-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - masabasi-frontend-ssr
+      - masabasi-api
+    networks:
+      - masabasi-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  masabasi-network:
+    driver: bridge
