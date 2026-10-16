@@ -49,14 +49,15 @@ interface FaqItem {
           </h1>
 
           <p class="home-hero__lead">
-            Hafta sonu planın hazır! ✨ İstanbul'da her Cumartesi düzenlediğimiz kutu oyunu buluşmalarında
+            Hafta sonu planın hazır! ✨ İstanbul'da her Cumartesi düzenlediğimiz Modern Kutu Oyunları buluşmalarında
             masalar kuruluyor; zarlar atılıyor, yeni dostluklar filizleniyor.
           </p>
 
           <p class="home-hero__sublead">
-            <strong>Catan, Terraforming Mars, Root</strong> ve 150'den fazla modern kutu oyununu birlikte deneyimliyoruz.
-            "Kuralları bilmiyorum" diye hiç çekinme; masada her şeyi birlikte öğreniyoruz.
-            İster tek başına gel yeni insanlarla tanış, ister arkadaşını kap gel!
+            BGG dünya 1 numarası <strong>Brass: Birmingham</strong>'dan sinematik uzay dehşeti <strong>Nemesis: Lockdown</strong>'a,
+            sosyoekonomik güç dengesi <strong>Hegemony</strong>'den asimetrik orman savaşı <strong>Root & Arcs</strong>'a,
+            Grand Prix yarış hiti <strong>Heat: Pedal to the Metal</strong>'dan <strong>Catan, Terraforming Mars ve Scythe</strong>'a
+            uzanan 75+ parçalık dev oyun arşivimizi birlikte masaya yatırıyoruz.
           </p>
 
           <div class="home-hero__actions">
@@ -92,10 +93,10 @@ interface FaqItem {
           <!-- Hızlı Vurgular / İstatistik Kartları -->
           <div class="home-hero__stats">
             <div class="stat-card">
-              <span class="stat-card__icon" aria-hidden="true">🪐</span>
+              <span class="stat-card__icon" aria-hidden="true">🏆</span>
               <div class="stat-card__body">
-                <strong>Modern & Klasik Oyunlar</strong>
-                <span>Catan, Terraforming Mars, Root, Avalon, Dune ve 150+ oyun</span>
+                <strong>75+ Özel BGG Arşivi</strong>
+                <span>Brass: Birmingham (#1), Nemesis, Hegemony, Eclipse, Root, Heat...</span>
               </div>
             </div>
 
@@ -103,7 +104,7 @@ interface FaqItem {
               <span class="stat-card__icon" aria-hidden="true">☕</span>
               <div class="stat-card__body">
                 <strong>Periwinkle Boardgame Cafe</strong>
-                <span>Bakırköy Kartaltepe'de ferah oyun salonu ve zengin kafe menüsü</span>
+                <span>Bakırköy Kartaltepe'de 150+ oyun kütüphanesi ve zengin kafe menüsü</span>
               </div>
             </div>
 
@@ -217,7 +218,7 @@ interface FaqItem {
                   <span class="venue-item__icon" aria-hidden="true">☕</span>
                   <div>
                     <strong>Mekan İmkanları</strong>
-                    <p>Geniş ahşap oyun masaları, 150+ kutu oyunu arşivi, lezzetli kahve & atıştırmalık menüsü ve konforlu havalandırmalı ortam.</p>
+                    <p>Geniş ahşap oyun masaları, kafenin 150+ oyunluk zengin arşivi, lezzetli kahve & atıştırmalık menüsü ve konforlu havalandırmalı ortam.</p>
                   </div>
                 </div>
               </div>
@@ -250,14 +251,15 @@ interface FaqItem {
         </div>
       </section>
 
-      <!-- 4. Ne Tarz Oyunlar Oynanıyor? (Catan, Terraforming Mars, Root, FRP & Parti) -->
+      <!-- 4. Ne Tarz Oyunlar Oynanıyor? (Genişletilmiş BGG Koleksiyonuyla) -->
       <section class="section games-section" aria-labelledby="games-heading">
         <div class="container">
           <div class="section-header">
-            <span class="section-eyebrow">Masalarımızdaki Oyunlar</span>
-            <h2 id="games-heading" class="section-title">Hangi Oyunları Oynuyoruz?</h2>
+            <span class="section-eyebrow">Zengin Koleksiyonumuz</span>
+            <h2 id="games-heading" class="section-title">Masalarımızdaki Oyun Yelpazesi</h2>
             <p class="section-subtitle">
-              Terraforming Mars'ın derin stratejisinden Catan'ın ticaret pazarlıklarına, Root'un asimetrik orman savaşlarından Secret Hitler'in blöflerine kadar zengin bir yelpaze!
+              BGG dünya sıralamasının zirvesindeki ağır stratejilerden sinematik bilimkurgu korkularına,
+              Türk yapımı parti oyunlarından tempolu yarışlara kadar uzanan benzersiz bir koleksiyon:
             </p>
           </div>
 
@@ -341,7 +343,7 @@ interface FaqItem {
             <span class="section-eyebrow">Merak Edilenler</span>
             <h2 id="faq-heading" class="section-title">Sıkça Sorulan Sorular</h2>
             <p class="section-subtitle">
-              Buluşmalarımız ve Periwinkle Cafe işleyişi hakkında merak edilen tüm detaylar:
+              Buluşmalarımız, oyun koleksiyonumuz ve Periwinkle Cafe işleyişi hakkında merak edilen tüm detaylar:
             </p>
           </div>
 
@@ -369,7 +371,7 @@ interface FaqItem {
             </h2>
             <p class="cta-banner__lead">
               Cumartesi gününüzü evde ekrana bakarak geçirmek yerine; Bakırköy Periwinkle Cafe'de sıcacık kahveler eşliğinde
-              yeni insanlarla tanışın, Catan, Terraforming Mars ve Root masalarına ortak olun.
+              yeni insanlarla tanışın, Brass: Birmingham, Nemesis, Hegemony, Terraforming Mars ve Root masalarına ortak olun.
             </p>
             <div class="cta-banner__actions">
               <a [href]="meetupUrl" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
@@ -460,7 +462,7 @@ interface FaqItem {
       font-size: 1.05rem;
       line-height: 1.7;
       color: var(--text-muted);
-      max-width: 760px;
+      max-width: 820px;
       margin-bottom: 2.5rem;
     }
 
@@ -1100,43 +1102,79 @@ export class HomePageComponent implements OnInit {
 
   public readonly gameCategories: GameCategoryShowcase[] = [
     {
-      id: 'modern-board-games',
-      icon: '🪐',
-      badge: 'Strateji & Kaynak',
-      title: 'Modern Kutu Oyunları',
-      games: ['Terraforming Mars', 'Catan', 'Root', 'Ticket to Ride: Europe', 'Dune: Imperium', 'Carcassonne'],
-      description: 'Zar atmanın ötesine geçen, kaynak yönetimi, asimetrik güç dengeleri, takas ve derin strateji sunan modern masaüstü klasikleri.',
-      detailLinkText: 'Kutu Oyunu Kütüphanesini İncele',
+      id: 'heavy-euro-strategy',
+      icon: '🏆',
+      badge: 'BGG #1 & Ağır Strateji',
+      title: 'Ağır Strateji & Euro Oyunları',
+      games: [
+        'Brass: Birmingham',
+        'Hegemony',
+        'Eclipse 4X',
+        'Terraforming Mars',
+        'Scythe',
+        'Barrage',
+        'Power Grid',
+        'Viticulture'
+      ],
+      description: 'Dünya 1 numarası Brass: Birmingham, sınıf çatışması simülasyonu Hegemony, uzay imparatorluğu Eclipse ve Alplerde hidroelektrik savaşı Barrage! Derin düşünce, sıfır şans ve saf strateji.',
+      detailLinkText: 'Strateji Arşivini Keşfet',
       detailRoute: '/oyun-kutuphanesi'
     },
     {
-      id: 'frp-dnd',
-      icon: '⚔️',
-      badge: 'Rol Yapma & Hikaye',
-      title: 'D&D 5e ve Masaüstü FRP',
-      games: ['Dungeons & Dragons 5e', 'Call of Cthulhu', 'One-Shot Maceralar', 'Acemi Masaları'],
-      description: 'Dungeon Master (DM) eşliğinde kendi kahramanınızı yaratıp zarların ve hayal gücünüzün rehberliğinde fantastik zindanlara adım atın.',
-      detailLinkText: 'D&D 5e Başlangıç Rehberini Oku',
-      detailRoute: '/frp-dnd-rehberi'
+      id: 'thematic-scifi-adventure',
+      icon: '🪐',
+      badge: 'Tematik & Asimetrik',
+      title: 'Kozmik Korku & Asimetrik Savaş',
+      games: [
+        'Nemesis: Lockdown & Retaliation',
+        'Root',
+        'Arcs',
+        'Dead of Winter',
+        'SETI (2024)',
+        'A Game of Thrones',
+        'Lords of Waterdeep',
+        'Sub Terra'
+      ],
+      description: 'Nemesis ile Mars üssünde ölümcül uzaylılardan kaçın, Root ve Arcs ile asimetrik galaksi/orman savaşlarına katılın, Dead of Winter\'da zombi krizinde aranızdaki gizli haini arayın!',
+      detailLinkText: 'Tematik Oyunları İncele',
+      detailRoute: '/oyun-kutuphanesi'
     },
     {
-      id: 'social-deduction',
+      id: 'social-deduction-party',
       icon: '🎭',
-      badge: 'Blöf & Kahkaha',
-      title: 'Sosyal Çıkarım & Parti',
-      games: ['The Resistance: Avalon', 'Secret Hitler', 'Blood on the Clocktower', 'Codenames', 'Spyfall'],
-      description: 'Kim faşist, kim büyücü, kim doğruyu söylüyor? Kalabalık gruplarla buzları eriten, bol kahkahalı ve dedüksiyon dolu masa oyunları.',
-      detailLinkText: 'Sosyal Çıkarım Stratejileri',
-      detailRoute: '/blog'
+      badge: 'Blöf & Türk Oyunları',
+      title: 'Sosyal Çıkarım, Dedüksiyon & Parti',
+      games: [
+        'Secret Hitler',
+        'The Resistance: Avalon',
+        'Cryptid',
+        'Skull',
+        'Ca$h \'n Guns',
+        'Gulyabani (Türk Yapımı)',
+        'Destek Köstek (Türk Yapımı)',
+        'Codenames'
+      ],
+      description: 'Masada kim faşist, kim doğruyu söylüyor, kim kurukafaya basacak? Sünger silahlarla Ca$h \'n Guns soygunları, saf blöf Skull, mantık dedüksiyonu Cryptid ve Türk korku oyunu Gulyabani!',
+      detailLinkText: 'Parti ve Blöf Oyunları',
+      detailRoute: '/oyun-kutuphanesi'
     },
     {
-      id: 'quick-fun',
-      icon: '🃏',
-      badge: 'Hafif & Eğlenceli',
-      title: 'Parti & Kart Oyunları',
-      games: ['Love Letter', 'Exploding Kittens', 'Saboteur', 'Dixit', 'Sushi Go!'],
-      description: '5 dakikada öğrenilen, hızlı turlarla dönen, çayınızı veya kahvenizi içerken masayı ısıtan hafif ve eğlenceli parti oyunları.',
-      detailLinkText: 'Kütüphaneyi Keşfet',
+      id: 'modern-hits-racing-cards',
+      icon: '🏎️',
+      badge: '2024 Hitleri & Yarış',
+      title: 'Modern Hitler, Yarış & Kart Oyunları',
+      games: [
+        'Heat: Pedal to the Metal',
+        'SCOUT',
+        'Bomb Busters',
+        'Captain Flip',
+        'Munchkin 1-2-3',
+        'Azul',
+        'Splendor & Pokémon',
+        'Stardew Valley'
+      ],
+      description: 'Grand Prix yarış efsanesi Heat, 66 görevli bomba imha kooperatifi Bomb Busters, kart dizilimini değiştiremediğiniz SCOUT, sevimli Stardew Valley ve eğlenceli Munchkin kapışmaları!',
+      detailLinkText: 'Kart & Yarış Kütüphanesi',
       detailRoute: '/oyun-kutuphanesi'
     }
   ];
@@ -1157,7 +1195,7 @@ export class HomePageComponent implements OnInit {
     {
       number: '03',
       title: 'Kuralları Birlikte Öğrenelim',
-      description: 'Daha önce hayatında hiç Catan, Terraforming Mars veya Root oynamamış olsan bile hiç çekinme! Her masada kuralları sabırla öğreten bir arkadaşımız vardır.',
+      description: 'Brass: Birmingham, Nemesis, Root veya Heat hiç oynamamış olsan bile çekinme! Her masada oyunları sıfırdan sabırla öğreten bir arkadaşımız vardır.',
       highlight: 'Soru sormaktan ve ilk turda hata yapmaktan asla çekinme.'
     },
     {
@@ -1186,20 +1224,20 @@ export class HomePageComponent implements OnInit {
     },
     {
       id: 'faq-4',
-      question: 'Etkinlik ücretli mi, nasıl bir kafe işleyişi var?',
-      answer: 'Masabaşı Oyun Kulübü bağımsız bir topluluktur ve kulüp üyelik ücreti almaz. Yalnızca buluştuğumuz Periwinkle Cafe\'nin standart masa/oyun kütüphanesi kullanım ve yeme-içme kuralları geçerlidir.'
+      question: 'Hangi oyunlar var? Kendi oyunumu getirebilir miyim?',
+      answer: 'Kulübümüzün BGG dünya 1 numarası Brass: Birmingham, Nemesis, Hegemony, Root, Eclipse, Heat, Terraforming Mars, Dead of Winter, Scythe gibi 75\'ten fazla seçkin oyundan oluşan özel bir koleksiyonu ve kafenin 150+ oyunluk zengin arşivi mevcuttur. Dileyen üyelerimiz evlerindeki sevdikleri oyunları da getirip diğer oyunculara öğreterek oynatabilir.'
     },
     {
       id: 'faq-5',
-      question: 'Kendi kutu oyunumu getirebilir miyim?',
-      answer: 'Elbette! Evinizde rafta oynanmayı bekleyen veya diğer üyelere öğretmek istediğiniz oyunlarınızı getirebilir, masanızda duyurarak diğer katılımcılarla birlikte oynayabilirsiniz.'
+      question: 'Etkinlik ücretli mi, nasıl bir kafe işleyişi var?',
+      answer: 'Masabaşı Oyun Kulübü bağımsız bir topluluktur ve kulüp üyelik ücreti almaz. Yalnızca buluştuğumuz Periwinkle Cafe\'nin standart masa/oyun kütüphanesi kullanım ve yeme-içme kuralları geçerlidir.'
     }
   ];
 
   ngOnInit(): void {
     this.seoMetaService.setMeta({
       title: 'Masabaşı Oyun Kulübü | İstanbul Bakırköy Kutu Oyunları & FRP Topluluğu',
-      description: 'İstanbul Bakırköy Periwinkle Boardgame Cafe\'de her Cumartesi 13:00 - 19:00 arası modern kutu oyunları (Catan, Terraforming Mars, Root) ve D&D 5e FRP masaları.',
+      description: 'İstanbul Bakırköy Periwinkle Cafe\'de her Cumartesi 13:00 - 19:00 arası Brass: Birmingham, Nemesis, Hegemony, Terraforming Mars, Root, Heat ve D&D 5e masaları.',
       canonicalUrl: 'https://masabasikulubu.com/'
     });
 
