@@ -27,4 +27,9 @@ public interface IGameCatalogService
     /// Mevcut bir oyunun kural rehberini veya bilgilerini günceller.
     /// </summary>
     Task<ServiceResult<bool>> UpdateGameAsync(Guid id, CreateBoardGameDto request, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Bir kutu oyununu mantıksal olarak siler (soft delete) ve snapshot'ları günceller.
+    /// </summary>
+    Task<ServiceResult<bool>> DeleteGameAsync(Guid id, CancellationToken cancellationToken = default);
 }

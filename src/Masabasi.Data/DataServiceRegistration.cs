@@ -17,10 +17,13 @@ public static class DataServiceRegistration
     public static IServiceCollection AddDataLayer(this IServiceCollection services, IConfiguration configuration)
     {
         string? connectionString = configuration.GetConnectionString("DefaultConnection");
+        bool useInMemory = string.IsNullOrWhiteSpace(connectionString) ||
+                           connectionString.StartsWith("InMemory:", StringComparison.OrdinalIgnoreCase) ||
+                           string.Equals(configuration["UseInMemoryDatabase"], "true", StringComparison.OrdinalIgnoreCase);
 
         services.AddDbContext<MasabasiDbContext>(options =>
         {
-            if (!string.IsNullOrWhiteSpace(connectionString))
+            if (!useInMemory && !string.IsNullOrWhiteSpace(connectionString))
             {
                 options.UseNpgsql(connectionString, npgsqlOptions =>
                 {
@@ -33,8 +36,11 @@ public static class DataServiceRegistration
             }
             else
             {
-                // Bağlantı cümlesi verilmemişse geliştirme/test için bellek içi sağlayıcı kullanılır
-                options.UseInMemoryDatabase("MasabasiDevDb");
+                // Bağlantı cümlesi verilmemişse veya InMemory belirtilmişse bellek içi sağlayıcı kullanılır
+                string dbName = connectionString?.StartsWith("InMemory:", StringComparison.OrdinalIgnoreCase) == true
+                    ? connectionString["InMemory:".Length..]
+                    : "MasabasiDevDb";
+                options.UseInMemoryDatabase(string.IsNullOrWhiteSpace(dbName) ? "MasabasiDevDb" : dbName);
             }
         });
 

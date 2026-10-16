@@ -200,4 +200,20 @@ public sealed class ArticleManager : IArticleService
         _logger.LogInformation("Makale güncellendi: {Title}", article.Title);
         return ServiceResult<bool>.Success(true);
     }
+
+    public async Task<ServiceResult<bool>> DeleteArticleAsync(Guid id, CancellationToken cancellationToken = default)
+    {
+        var article = await _dbContext.Articles.FirstOrDefaultAsync(a => a.Id == id && !a.IsDeleted, cancellationToken);
+        if (article is null)
+            return ServiceResult<bool>.Failure("Silinecek makale bulunamadı.", 404);
+
+        article.IsDeleted = true;
+        await _dbContext.SaveChangesAsync(cancellationToken);
+
+        await _snapshotService.ExportArticlesSnapshotAsync(cancellationToken);
+        await _snapshotService.ExportSitemapXmlAsync(cancellationToken);
+
+        _logger.LogInformation("Makale silindi: {Title} ({Id})", article.Title, article.Id);
+        return ServiceResult<bool>.Success(true, 204);
+    }
 }

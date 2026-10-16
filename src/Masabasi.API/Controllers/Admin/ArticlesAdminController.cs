@@ -39,4 +39,14 @@ public sealed class ArticlesAdminController : BaseApiController
         var result = await _articleService.UpdateArticleAsync(id, request, cancellationToken);
         return HandleResult(result);
     }
+
+    /// <summary>
+    /// Bir makaleyi mantıksal olarak siler (soft delete).
+    /// </summary>
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> DeleteArticle(Guid id, CancellationToken cancellationToken)
+    {
+        var result = await _articleService.DeleteArticleAsync(id, cancellationToken);
+        return HandleResult(result);
+    }
 }

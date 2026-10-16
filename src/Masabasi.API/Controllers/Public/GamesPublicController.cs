@@ -25,7 +25,7 @@ public sealed class GamesPublicController : BaseApiController
     /// Kategori, oyuncu sayısı ve karmaşıklığa göre filtrelenmiş oyun kataloğunu getirir.
     /// </summary>
     [HttpGet]
-    [OutputCache(Duration = 60)]
+    [OutputCache(Duration = 60, Tags = ["games"])]
     public async Task<IActionResult> GetGames([FromQuery] GameFilterDto filter, CancellationToken cancellationToken)
     {
         var result = await _gameCatalogService.GetGamesAsync(filter, cancellationToken);
@@ -36,7 +36,7 @@ public sealed class GamesPublicController : BaseApiController
     /// SEO slug bilgisine göre oyunun kural rehberini ve detaylarını getirir.
     /// </summary>
     [HttpGet("{slug}")]
-    [OutputCache(Duration = 60)]
+    [OutputCache(Duration = 60, Tags = ["games"])]
     public async Task<IActionResult> GetGameBySlug(string slug, CancellationToken cancellationToken)
     {
         var result = await _gameCatalogService.GetGameBySlugAsync(slug, cancellationToken);

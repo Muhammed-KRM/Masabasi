@@ -31,4 +31,9 @@ public interface IArticleService
     /// Mevcut bir makaleyi günceller.
     /// </summary>
     Task<ServiceResult<bool>> UpdateArticleAsync(Guid id, CreateArticleDto request, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Bir makaleyi mantıksal olarak siler (soft delete) ve snapshot'ları günceller.
+    /// </summary>
+    Task<ServiceResult<bool>> DeleteArticleAsync(Guid id, CancellationToken cancellationToken = default);
 }

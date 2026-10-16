@@ -146,4 +146,92 @@ public sealed class EventRepositoryTests
         result.Tables.First().Reservations.Should().HaveCount(1);
         result.Tables.First().Reservations.First().PlayerName.Should().Be("Mehmet S.");
     }
+
+    [Fact]
+    public async Task GetEventWithTablesByIdAsync_ShouldReturnEvent_WhenIdExists()
+    {
+        // Arrange
+        await using var context = CreateInMemoryDbContext();
+        var repository = new EventRepository(context);
+
+        var eventId = Guid.NewGuid();
+        var clubEvent = new ClubEvent
+        {
+            Id = eventId,
+            Title = "ID ile Arama Etkinliği",
+            Slug = "id-ile-arama",
+            TldrSummary = "Test özeti.",
+            StartDateUtc = DateTimeOffset.UtcNow.AddDays(1),
+            EndDateUtc = DateTimeOffset.UtcNow.AddDays(1).AddHours(4),
+            VenueName = "Kadıköy",
+            VenueAddress = "Kadıköy",
+            IsActive = true,
+            Tables = new List<GameTable>
+            {
+                new()
+                {
+                    TableNumber = 1,
+                    GameTitle = "Munchkin",
+                    Category = "CardGame",
+                    HostOrDmName = "Host",
+                    MaxPlayers = 6,
+                    CurrentPlayers = 3
+                }
+            }
+        };
+
+        await context.ClubEvents.AddAsync(clubEvent);
+        await context.SaveChangesAsync();
+
+        // Act
+        var found = await repository.GetEventWithTablesByIdAsync(eventId);
+        var notFound = await repository.GetEventWithTablesByIdAsync(Guid.NewGuid());
+
+        // Assert
+        found.Should().NotBeNull();
+        found!.Title.Should().Be("ID ile Arama Etkinliği");
+        found.Tables.Should().HaveCount(1);
+        notFound.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task GetAllEventsWithTablesAsync_ShouldReturnAllEventsOrderedDescending()
+    {
+        // Arrange
+        await using var context = CreateInMemoryDbContext();
+        var repository = new EventRepository(context);
+
+        var ev1 = new ClubEvent
+        {
+            Title = "Eski Buluşma",
+            Slug = "eski-bulusma",
+            TldrSummary = "Özet",
+            StartDateUtc = DateTimeOffset.UtcNow.AddDays(-14),
+            EndDateUtc = DateTimeOffset.UtcNow.AddDays(-14).AddHours(5),
+            VenueName = "Kadıköy",
+            VenueAddress = "Kadıköy"
+        };
+
+        var ev2 = new ClubEvent
+        {
+            Title = "Yeni Buluşma",
+            Slug = "yeni-bulusma",
+            TldrSummary = "Özet",
+            StartDateUtc = DateTimeOffset.UtcNow.AddDays(7),
+            EndDateUtc = DateTimeOffset.UtcNow.AddDays(7).AddHours(5),
+            VenueName = "Kadıköy",
+            VenueAddress = "Kadıköy"
+        };
+
+        await context.ClubEvents.AddRangeAsync(ev1, ev2);
+        await context.SaveChangesAsync();
+
+        // Act
+        var all = await repository.GetAllEventsWithTablesAsync();
+
+        // Assert
+        all.Should().HaveCount(2);
+        all[0].Slug.Should().Be("yeni-bulusma"); // En yeni tarihli ilk sırada olmalı
+        all[1].Slug.Should().Be("eski-bulusma");
+    }
 }

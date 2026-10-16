@@ -184,4 +184,21 @@ public sealed class GameCatalogManager : IGameCatalogService
         _logger.LogInformation("Oyun bilgileri güncellendi: {Title}", game.Title);
         return ServiceResult<bool>.Success(true);
     }
+
+    public async Task<ServiceResult<bool>> DeleteGameAsync(Guid id, CancellationToken cancellationToken = default)
+    {
+        var game = await _dbContext.BoardGames.FirstOrDefaultAsync(g => g.Id == id && !g.IsDeleted, cancellationToken);
+        if (game is null)
+            return ServiceResult<bool>.Failure("Silinecek oyun bulunamadı.", 404);
+
+        game.IsDeleted = true;
+        await _dbContext.SaveChangesAsync(cancellationToken);
+
+        await _snapshotService.ExportGamesSnapshotAsync(cancellationToken);
+        await _snapshotService.ExportLlmsTxtAsync(cancellationToken);
+        await _snapshotService.ExportSitemapXmlAsync(cancellationToken);
+
+        _logger.LogInformation("Oyun silindi: {Title} ({Id})", game.Title, game.Id);
+        return ServiceResult<bool>.Success(true, 204);
+    }
 }
