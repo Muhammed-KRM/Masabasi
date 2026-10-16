@@ -54,10 +54,11 @@ interface FaqItem {
           </p>
 
           <p class="home-hero__sublead">
+            Listemizdeki tüm oyunlar <strong>bizzat oynadığımız, mekaniklerini ve kurallarını çok iyi bildiğimiz</strong> oyunlardır.
             BGG dünya 1 numarası <strong>Brass: Birmingham</strong>'dan sinematik uzay dehşeti <strong>Nemesis: Lockdown</strong>'a,
             sosyoekonomik güç dengesi <strong>Hegemony</strong>'den asimetrik orman savaşı <strong>Root & Arcs</strong>'a,
             Grand Prix yarış hiti <strong>Heat: Pedal to the Metal</strong>'dan <strong>Catan, Terraforming Mars ve Scythe</strong>'a
-            uzanan 75+ parçalık dev oyun arşivimizi birlikte masaya yatırıyoruz.
+            uzanan 75'ten fazla oyunu masada sıfırdan sana anlatıyor, kuralları birlikte keşfediyoruz.
           </p>
 
           <div class="home-hero__actions">
@@ -95,8 +96,8 @@ interface FaqItem {
             <div class="stat-card">
               <span class="stat-card__icon" aria-hidden="true">🏆</span>
               <div class="stat-card__body">
-                <strong>75+ Özel BGG Arşivi</strong>
-                <span>Brass: Birmingham (#1), Nemesis, Hegemony, Eclipse, Root, Heat...</span>
+                <strong>75+ Anlatabileceğimiz Oyun</strong>
+                <span>Bizzat oynadığımız, kurallarına hakim olduğumuz ve masada sıfırdan anlattığımız oyunlar</span>
               </div>
             </div>
 
@@ -251,15 +252,15 @@ interface FaqItem {
         </div>
       </section>
 
-      <!-- 4. Ne Tarz Oyunlar Oynanıyor? (Genişletilmiş BGG Koleksiyonuyla) -->
+      <!-- 4. Ne Tarz Oyunlar Oynanıyor? (Bizzat Oynadığımız & Anlatabileceğimiz Oyunlar) -->
       <section class="section games-section" aria-labelledby="games-heading">
         <div class="container">
           <div class="section-header">
-            <span class="section-eyebrow">Zengin Koleksiyonumuz</span>
-            <h2 id="games-heading" class="section-title">Masalarımızdaki Oyun Yelpazesi</h2>
+            <span class="section-eyebrow">Bizzat Oynadık & Kurallara Hakimiz</span>
+            <h2 id="games-heading" class="section-title">Masada Anlatabileceğimiz Oyun Yelpazesi</h2>
             <p class="section-subtitle">
-              BGG dünya sıralamasının zirvesindeki ağır stratejilerden sinematik bilimkurgu korkularına,
-              Türk yapımı parti oyunlarından tempolu yarışlara kadar uzanan benzersiz bir koleksiyon:
+              "Kural bilmiyorum" endişesine gerek yok! Aşağıdaki oyunların hepsini defalarca oynadık, mekaniklerini çok iyi biliyoruz
+              ve Cumartesi buluşmalarımızda masada sana sıfırdan adım adım anlatıyoruz:
             </p>
           </div>
 
@@ -1116,8 +1117,8 @@ export class HomePageComponent implements OnInit {
         'Power Grid',
         'Viticulture'
       ],
-      description: 'Dünya 1 numarası Brass: Birmingham, sınıf çatışması simülasyonu Hegemony, uzay imparatorluğu Eclipse ve Alplerde hidroelektrik savaşı Barrage! Derin düşünce, sıfır şans ve saf strateji.',
-      detailLinkText: 'Strateji Arşivini Keşfet',
+      description: 'Dünya 1 numarası Brass: Birmingham, sınıf çatışması simülasyonu Hegemony, uzay imparatorluğu Eclipse ve Alplerde hidroelektrik savaşı Barrage! Hepsini defalarca masaya yatırdık; derin stratejilerini ve kural detaylarını sıfırdan anlatıyoruz.',
+      detailLinkText: 'Strateji Oyunlarını İncele',
       detailRoute: '/oyun-kutuphanesi'
     },
     {
@@ -1135,7 +1136,7 @@ export class HomePageComponent implements OnInit {
         'Lords of Waterdeep',
         'Sub Terra'
       ],
-      description: 'Nemesis ile Mars üssünde ölümcül uzaylılardan kaçın, Root ve Arcs ile asimetrik galaksi/orman savaşlarına katılın, Dead of Winter\'da zombi krizinde aranızdaki gizli haini arayın!',
+      description: 'Nemesis ile Mars üssünde ölümcül uzaylı gerilimini, Root ve Arcs ile asimetrik güç mücadelelerini bizzat deneyimledik. Masada sana her kuralı ve fraksiyon dinamiğini sabırla öğretiyoruz.',
       detailLinkText: 'Tematik Oyunları İncele',
       detailRoute: '/oyun-kutuphanesi'
     },
@@ -1154,7 +1155,7 @@ export class HomePageComponent implements OnInit {
         'Destek Köstek (Türk Yapımı)',
         'Codenames'
       ],
-      description: 'Masada kim faşist, kim doğruyu söylüyor, kim kurukafaya basacak? Sünger silahlarla Ca$h \'n Guns soygunları, saf blöf Skull, mantık dedüksiyonu Cryptid ve Türk korku oyunu Gulyabani!',
+      description: 'Blöfün, dedüksiyonun ve Türk yapımı oyunların (Gulyabani, Destek Köstek) kurallarını ilk turda hemen kavrayacağınız şekilde anlatıyor, masayı kahkahaya ve rekabete boğuyoruz.',
       detailLinkText: 'Parti ve Blöf Oyunları',
       detailRoute: '/oyun-kutuphanesi'
     },
@@ -1173,8 +1174,8 @@ export class HomePageComponent implements OnInit {
         'Splendor & Pokémon',
         'Stardew Valley'
       ],
-      description: 'Grand Prix yarış efsanesi Heat, 66 görevli bomba imha kooperatifi Bomb Busters, kart dizilimini değiştiremediğiniz SCOUT, sevimli Stardew Valley ve eğlenceli Munchkin kapışmaları!',
-      detailLinkText: 'Kart & Yarış Kütüphanesi',
+      description: 'Grand Prix efsanesi Heat, kooperatif bomba imhası Bomb Busters ve SCOUT gibi modern hitlerin kurallarını 5 dakikada özetleyip doğrudan aksiyona başlıyoruz.',
+      detailLinkText: 'Kart & Yarış Oyunları',
       detailRoute: '/oyun-kutuphanesi'
     }
   ];
@@ -1224,8 +1225,8 @@ export class HomePageComponent implements OnInit {
     },
     {
       id: 'faq-4',
-      question: 'Hangi oyunlar var? Kendi oyunumu getirebilir miyim?',
-      answer: 'Kulübümüzün BGG dünya 1 numarası Brass: Birmingham, Nemesis, Hegemony, Root, Eclipse, Heat, Terraforming Mars, Dead of Winter, Scythe gibi 75\'ten fazla seçkin oyundan oluşan özel bir koleksiyonu ve kafenin 150+ oyunluk zengin arşivi mevcuttur. Dileyen üyelerimiz evlerindeki sevdikleri oyunları da getirip diğer oyunculara öğreterek oynatabilir.'
+      question: 'Hangi oyunları oynuyorsunuz? Kuralları bilmiyorsam ne olacak?',
+      answer: 'Sitemizde yer alan oyunlar; kulüp olarak bizzat oynadığımız, kurallarına, mekaniklerine ve stratejilerine tam olarak hakim olduğumuz ve masada sıfırdan anlatabileceğimiz oyunlardır (Brass: Birmingham, Nemesis, Hegemony, Root, Eclipse, Heat, Terraforming Mars, Scythe vb.). Daha önce bu oyunları hiç oynamamış olmanız asla sorun değildir; masaya oturduğunuzda kutuyu açıp kuralları baştan sona sabırla anlatıyoruz. Ayrıca Periwinkle Cafe\'nin geniş kütüphanesinden de oyun seçebiliyor veya evinizdeki sevdiğiniz oyunları getirebiliyorsunuz.'
     },
     {
       id: 'faq-5',

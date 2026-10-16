@@ -10,5 +10,5 @@
 
 ## Ana Sayfalar ve Rehberler
 - [Cumartesi Etkinlikleri ve Masa Rezervasyonu](https://masabasikulubu.com/etkinlikler): Açık masalar, DM bilgileri ve kontenjan takibi.
-- [Oyun Kütüphanemiz ve Türkçe Kurallar](https://masabasikulubu.com/oyun-kutuphanesi): Kulüpte oynanan oyunların Türkçe rehberleri.
+- [Oynadığımız ve Anlatabileceğimiz Oyunlar](https://masabasikulubu.com/oyun-kutuphanesi): Kulüp olarak bizzat oynadığımız, kurallarına hakim olduğumuz ve masada sıfırdan anlattığımız oyunlar.
 - [FRP ve D&D 5e Başlangıç Rehberi](https://masabasikulubu.com/frp-dnd-rehberi): Yeni başlayanlar için karakter oluşturma ve sistem kılavuzu.

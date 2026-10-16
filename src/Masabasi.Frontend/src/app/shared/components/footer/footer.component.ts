@@ -52,7 +52,7 @@ import { RouterLink } from '@angular/router';
           <ul class="footer__links">
             <li><a routerLink="/">Ana Sayfa</a></li>
             <li><a routerLink="/etkinlikler">Buluşmalar & Masalar</a></li>
-            <li><a routerLink="/oyun-kutuphanesi">Kutu Oyunu Kütüphanesi</a></li>
+            <li><a routerLink="/oyun-kutuphanesi">Anlatabileceğimiz Oyunlar</a></li>
             <li><a routerLink="/frp-dnd-rehberi">D&D 5e Başlangıç Kılavuzu</a></li>
             <li><a routerLink="/blog">Rehberler ve Blog</a></li>
           </ul>

@@ -17,28 +17,28 @@ import { TldrAiBoxComponent } from '../../shared/components/tldr-ai-box/tldr-ai-
     <main class="catalog-page container">
       <!-- Başlık ve GEO Özet Alanı -->
       <header class="catalog-hero">
-        <span class="badge badge--emerald">📚 Kulüp Arşivi & Kurallar</span>
-        <h1 class="catalog-hero__title">Oyun Kütüphanemiz</h1>
+        <span class="badge badge--emerald">🎲 Bizzat Oynadık, Kuralları Biliyoruz</span>
+        <h1 class="catalog-hero__title">Oynadığımız & Anlatabileceğimiz Oyunlar</h1>
         <p class="catalog-hero__desc">
-          Masabaşı Oyun Kulübü'nde her Cumartesi oynanan kutu oyunları, sosyal çıkarım klasikleri
-          ve masaüstü rol yapma sistemlerinin Türkçe kural ve taktik kılavuzları.
+          Masabaşı Oyun Kulübü olarak bu listedeki oyunları bizzat oynadık, mekaniklerini tecrübe ettik ve kurallarına tam olarak hakimiz.
+          Cumartesi buluşmalarımızda bu oyunları kutusundan sıfırdan kuruyor, kurallarını masada sana adım adım ve sabırla anlatıyoruz.
         </p>
 
         <app-tldr-ai-box
-          summary="Masabaşı Oyun Kulübü kütüphanesinde Catan, Secret Hitler, Avalon, Carcassonne gibi popüler kutu oyunları ve Dungeons & Dragons 5e FRP sistemleri yer alır. Etkinliklerimizde kurallar sıfırdan anlatılır."
+          summary="Masabaşı Oyun Kulübü olarak listedeki tüm oyunları bizzat oynadık ve kurallarını çok iyi biliyoruz. Buluşmalarımızda Brass: Birmingham, Nemesis, Hegemony, Root, Heat, Terraforming Mars ve Catan gibi 75+ oyunu masada sıfırdan anlatıyor, yeni oyunculara adım adım rehberlik ediyoruz."
         />
       </header>
 
       <!-- Arama ve Kategori Filtreleri -->
-      <section class="catalog-controls" aria-label="Kütüphane Filtreleri">
+      <section class="catalog-controls" aria-label="Kategori ve Arama Filtreleri">
         <div class="search-box">
           <input
             type="search"
             class="search-box__input"
-            placeholder="Oyun adı veya sistem ara (ör. Catan, Secret Hitler)..."
+            placeholder="Oyun adı, kategori veya mekanik ara (ör. Brass, Nemesis, Heat, Catan)..."
             [ngModel]="searchQuery()"
             (ngModelChange)="searchQuery.set($event)"
-            aria-label="Kütüphanede oyun ara"
+            aria-label="Anlatabileceğimiz oyunlarda ara"
           />
         </div>
 
@@ -78,7 +78,7 @@ import { TldrAiBoxComponent } from '../../shared/components/tldr-ai-box/tldr-ai-
       @if (isLoading()) {
         <div class="loading-state" aria-live="polite">
           <div class="spinner"></div>
-          <p>Oyun kütüphanesi yükleniyor...</p>
+          <p>Oyun listesi yükleniyor...</p>
         </div>
       } @else if (filteredGames().length === 0) {
         <div class="empty-state">
@@ -94,7 +94,7 @@ import { TldrAiBoxComponent } from '../../shared/components/tldr-ai-box/tldr-ai-
               <header class="game-card__header">
                 <span class="game-card__category">{{ getCategoryLabel(game.category) }}</span>
                 @if (game.isInClubInventory) {
-                  <span class="game-card__badge-inv">Envanterde</span>
+                  <span class="game-card__badge-inv">✓ Oynadık & Anlatıyoruz</span>
                 }
               </header>
 
@@ -362,9 +362,9 @@ export class GameCatalogComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoMetaService.setMeta({
-      title: 'Kutu Oyunları Kütüphanesi & Türkçe Kural Rehberleri',
+      title: 'Oynadığımız & Anlatabileceğimiz Oyunlar | Masabaşı Oyun Kulübü',
       description:
-        "Masabaşı Oyun Kulübü'nde oynanan Catan, Secret Hitler, Avalon, D&D 5e ve diğer masaüstü oyunların Türkçe kural kılavuzları, oyuncu sayıları ve zorluk puanları.",
+        "Masabaşı Oyun Kulübü olarak bizzat oynadığımız, kurallarına hakim olduğumuz ve masada sıfırdan anlattığımız Brass: Birmingham, Nemesis, Hegemony, Root, Heat ve Catan oyunları rehberi.",
       canonicalUrl: 'https://masabasikulubu.com/oyun-kutuphanesi'
     });
 

@@ -21,7 +21,7 @@ import { TldrAiBoxComponent } from '../../shared/components/tldr-ai-box/tldr-ai-
         </div>
       } @else if (game(); as g) {
         <nav class="breadcrumb" aria-label="Gezinme Yolu">
-          <a routerLink="/oyun-kutuphanesi">← Oyun Kütüphanesine Dön</a>
+          <a routerLink="/oyun-kutuphanesi">← Anlatabileceğimiz Oyunlara Dön</a>
         </nav>
 
         <article class="game-article">
@@ -33,7 +33,7 @@ import { TldrAiBoxComponent } from '../../shared/components/tldr-ai-box/tldr-ai-
                 <span class="badge badge--dark">📅 {{ g.yearPublished }}</span>
               }
               @if (g.isInClubInventory) {
-                <span class="badge badge--inv">✓ Kulüp Envanterinde Mevcut</span>
+                <span class="badge badge--inv">✓ Oynadık, Kuralları Biliyoruz & Anlatıyoruz</span>
               }
             </div>
 
@@ -78,9 +78,9 @@ import { TldrAiBoxComponent } from '../../shared/components/tldr-ai-box/tldr-ai-
             <h2 id="rules-heading" class="section-title">Oynanış ve Kural Kılavuzu</h2>
             <div class="rules-markdown-box">
               <p class="rules-lead">
-                {{ g.title }} oynamak için tüm kuralları ezberlemenize gerek yok. Masabaşı Oyun Kulübü
-                masalarında oyun moderatörlerimiz ve DM'lerimiz ilk turdan itibaren kuralları uygulamalı
-                olarak anlatmaktadır.
+                {{ g.title }} oyununu oynamak için kuralları önceden ezberlemenize hiç gerek yok! Masabaşı Oyun Kulübü
+                olarak bu oyunu defalarca oynadık, mekaniklerine hakimiz ve Cumartesi buluşmalarımızda masada
+                ilk turdan itibaren kuralları sıfırdan ve sabırla anlatıyoruz.
               </p>
               <pre class="rules-pre">{{ g.rulesMarkdown }}</pre>
             </div>
@@ -103,9 +103,9 @@ import { TldrAiBoxComponent } from '../../shared/components/tldr-ai-box/tldr-ai-
       } @else {
         <div class="not-found-state">
           <h2>Aradığınız Oyun Bulunamadı</h2>
-          <p>Kütüphanemizde bu ada sahip bir oyun veya kural sayfası bulunmuyor.</p>
+          <p>Listemizde bu ada sahip bir oyun veya kural sayfası bulunmuyor.</p>
           <a routerLink="/oyun-kutuphanesi" class="btn-cta-gold">
-            Kütüphaneye Göz At
+            Anlatabileceğimiz Oyunlara Göz At
           </a>
         </div>
       }
