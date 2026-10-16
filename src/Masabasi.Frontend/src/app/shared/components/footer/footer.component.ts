@@ -50,7 +50,8 @@ import { RouterLink } from '@angular/router';
         <div class="footer__links-col">
           <h4 class="footer__heading">Keşfet</h4>
           <ul class="footer__links">
-            <li><a routerLink="/etkinlikler">Cumartesi Masaları</a></li>
+            <li><a routerLink="/">Ana Sayfa</a></li>
+            <li><a routerLink="/etkinlikler">Buluşmalar & Masalar</a></li>
             <li><a routerLink="/oyun-kutuphanesi">Kutu Oyunu Kütüphanesi</a></li>
             <li><a routerLink="/frp-dnd-rehberi">D&D 5e Başlangıç Kılavuzu</a></li>
             <li><a routerLink="/blog">Rehberler ve Blog</a></li>

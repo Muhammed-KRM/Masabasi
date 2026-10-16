@@ -30,7 +30,8 @@ describe('NavbarComponent', () => {
   it('should render brand logo and navigation links', () => {
     const el = fixture.nativeElement as HTMLElement;
     expect(el.querySelector('.navbar__title')?.textContent).toContain('MASABAŞI');
-    expect(el.textContent).toContain('Cumartesi Masaları');
+    expect(el.textContent).toContain('Ana Sayfa');
+    expect(el.textContent).toContain('Buluşmalar & Masalar');
     expect(el.textContent).toContain('Oyun Kütüphanesi');
     expect(el.textContent).toContain('FRP & D&D Rehberi');
   });

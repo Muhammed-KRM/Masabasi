@@ -58,55 +58,51 @@ import { ReservationModalComponent } from '../../shared/components/reservation-m
           <app-tldr-ai-box [summary]="event.tldrSummary" />
         </header>
 
-        <!-- Filtreleme ve Masa Kontrolleri -->
-        <section class="tables-section" aria-labelledby="tables-heading">
-          <div class="tables-section__header">
-            <div>
-              <h2 id="tables-heading" class="tables-section__title">Açık Masalar & Kontenjan Durumu</h2>
-              <p class="tables-section__subtitle">
-                İlgilendiğiniz masaya tıklayarak koltuğunuzu ayırtın veya oyun anlatıcısı DM'in detaylarını inceleyin.
-              </p>
+        <!-- Masalar Bölümü: Yalnızca canlı API'den gelen gerçek masalar varsa göster -->
+        @if (allTables().length > 0) {
+          <section class="tables-section" aria-labelledby="tables-heading">
+            <div class="tables-section__header">
+              <div>
+                <h2 id="tables-heading" class="tables-section__title">Açık Masalar & Kontenjan Durumu</h2>
+                <p class="tables-section__subtitle">
+                  İlgilendiğiniz masaya tıklayarak koltuğunuzu ayırtın veya oyun anlatıcısı DM'in detaylarını inceleyin.
+                </p>
+              </div>
+
+              <!-- Kategori Filtre Butonları -->
+              <div class="category-filters" role="group" aria-label="Masa Kategorileri">
+                <button
+                  type="button"
+                  class="filter-chip"
+                  [class.active]="selectedCategory() === 'ALL'"
+                  (click)="setCategory('ALL')">
+                  Tümü ({{ allTables().length }})
+                </button>
+                <button
+                  type="button"
+                  class="filter-chip"
+                  [class.active]="selectedCategory() === 'FRP_DnD'"
+                  (click)="setCategory('FRP_DnD')">
+                  ⚔️ FRP / D&D 5e
+                </button>
+                <button
+                  type="button"
+                  class="filter-chip"
+                  [class.active]="selectedCategory() === 'SocialDeduction'"
+                  (click)="setCategory('SocialDeduction')">
+                  🎭 Sosyal Çıkarım
+                </button>
+                <button
+                  type="button"
+                  class="filter-chip"
+                  [class.active]="selectedCategory() === 'BoardGame'"
+                  (click)="setCategory('BoardGame')">
+                  ♟️ Kutu Oyunları
+                </button>
+              </div>
             </div>
 
-            <!-- Kategori Filtre Butonları -->
-            <div class="category-filters" role="group" aria-label="Masa Kategorileri">
-              <button
-                type="button"
-                class="filter-chip"
-                [class.active]="selectedCategory() === 'ALL'"
-                (click)="setCategory('ALL')">
-                Tümü ({{ allTables().length }})
-              </button>
-              <button
-                type="button"
-                class="filter-chip"
-                [class.active]="selectedCategory() === 'FRP_DnD'"
-                (click)="setCategory('FRP_DnD')">
-                ⚔️ FRP / D&D 5e
-              </button>
-              <button
-                type="button"
-                class="filter-chip"
-                [class.active]="selectedCategory() === 'SocialDeduction'"
-                (click)="setCategory('SocialDeduction')">
-                🎭 Sosyal Çıkarım
-              </button>
-              <button
-                type="button"
-                class="filter-chip"
-                [class.active]="selectedCategory() === 'BoardGame'"
-                (click)="setCategory('BoardGame')">
-                ♟️ Kutu Oyunları
-              </button>
-            </div>
-          </div>
-
-          <!-- Masa Kartları Grid Listesi -->
-          @if (filteredTables().length === 0) {
-            <div class="empty-state">
-              <p>Seçilen kategoride henüz açılmış bir masa bulunmamaktadır.</p>
-            </div>
-          } @else {
+            <!-- Masa Kartları Grid Listesi -->
             <div class="tables-grid">
               @for (table of filteredTables(); track table.id) {
                 <app-table-seat-card
@@ -115,15 +111,75 @@ import { ReservationModalComponent } from '../../shared/components/reservation-m
                   (reserveClicked)="openReservationModal($event)" />
               }
             </div>
-          }
-        </section>
+          </section>
 
-        <!-- Koltuk Rezervasyon Modal Penceresi -->
-        @if (selectedTableForReservation(); as table) {
-          <app-reservation-modal
-            [table]="table"
-            (closed)="closeReservationModal()"
-            (reservationSuccess)="handleReservationSuccess($event)" />
+          <!-- Koltuk Rezervasyon Modal Penceresi (Sadece gerçek masa listesi varken) -->
+          @if (selectedTableForReservation(); as table) {
+            <app-reservation-modal
+              [table]="table"
+              (closed)="closeReservationModal()"
+              (reservationSuccess)="handleReservationSuccess($event)" />
+          }
+        } @else {
+          <!-- Masalar Canlı Açılmamışsa veya Tanıtım Modundaysa: Dürüst ve Zengin Buluşma Rehberi -->
+          <section class="walkin-section" aria-labelledby="walkin-title">
+            <div class="walkin-card">
+              <span class="walkin-eyebrow">Etkinlik Katılım Rehberi</span>
+              <h2 id="walkin-title" class="walkin-card__title">
+                Masalarımız Kadıköy Mekanında Doğrudan Açık Katılımla Kurulmaktadır
+              </h2>
+              <p class="walkin-card__lead">
+                Masabaşı Oyun Kulübü haftalık buluşmalarında masalarımız, mekana gelen katılımcılarımızın
+                oyun tercihlerine göre moderatörlerimiz eşliğinde anlık ve serbest akışla kurulur.
+                Önceden koltuk rezervasyonu yapmanıza gerek yoktur.
+              </p>
+
+              <div class="walkin-steps">
+                <div class="walkin-step">
+                  <span class="walkin-step__icon" aria-hidden="true">🤝</span>
+                  <div class="walkin-step__body">
+                    <strong>1. Meetup veya Instagram'dan Katılımınızı Bildirin</strong>
+                    <p>Haftalık buluşma sayfamızdan LCV vererek veya Instagram'dan bize mesaj atarak geleceğinizi iletebilirsiniz.</p>
+                  </div>
+                </div>
+
+                <div class="walkin-step">
+                  <span class="walkin-step__icon" aria-hidden="true">📍</span>
+                  <div class="walkin-step__body">
+                    <strong>2. Cumartesi Günü Saat 11:00 İtibarıyla Mekana Gelin</strong>
+                    <p>Kadıköy'deki buluşma mekanımıza ister tek başınıza ister arkadaşlarınızla gelin; kapıda sizi karşılar ve açık masalara yönlendiririz.</p>
+                  </div>
+                </div>
+
+                <div class="walkin-step">
+                  <span class="walkin-step__icon" aria-hidden="true">🎲</span>
+                  <div class="walkin-step__body">
+                    <strong>3. Masaya Oturun, Kuralları Birlikte Dinleyelim</strong>
+                    <p>Oyun kurallarını bilmiyorum diye endişelenmeyin! Her masadaki moderatörlerimiz veya deneyimli oyuncular kuralları sabırla anlatır.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="walkin-actions">
+                <a
+                  [href]="event.meetupEventUrl ?? 'https://www.meetup.com/tr-tr/masaba%c5%9f%c4%b1-oyun-kulubu/'"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-gold-action">
+                  <span aria-hidden="true">🤝</span>
+                  <span>Meetup Etkinliğine Katıl</span>
+                </a>
+                <a
+                  [href]="event.externalRegistrationUrl ?? 'https://www.instagram.com/masabasikulubu/'"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-outline-action">
+                  <span aria-hidden="true">📸</span>
+                  <span>Instagram Hesabımızdan Mesaj At</span>
+                </a>
+              </div>
+            </div>
+          </section>
         }
       } @else {
         <div class="empty-state">
@@ -302,6 +358,144 @@ import { ReservationModalComponent } from '../../shared/components/reservation-m
       border: 1px dashed var(--border-secondary-subtle);
       border-radius: 12px;
       color: var(--text-muted);
+    }
+
+    /* Walk-in Etkinlik Katılım Rehberi Bölümü */
+    .walkin-section {
+      margin-top: 2rem;
+    }
+
+    .walkin-card {
+      background: linear-gradient(145deg, var(--surface-secondary-walnut) 0%, #151922 100%);
+      border: 1px solid var(--accent-gold-primary);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+      @media (min-width: 768px) {
+        padding: 3.5rem 3rem;
+      }
+    }
+
+    .walkin-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-gold-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .walkin-card__title {
+      font-size: 1.85rem;
+      color: var(--text-primary);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+
+      @media (min-width: 768px) {
+        font-size: 2.3rem;
+      }
+    }
+
+    .walkin-card__lead {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin-bottom: 2.5rem;
+    }
+
+    .walkin-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .walkin-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: rgba(12, 14, 18, 0.6);
+      border: 1px solid var(--border-secondary-subtle);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+    }
+
+    .walkin-step__icon {
+      font-size: 1.75rem;
+      line-height: 1;
+      padding-top: 0.1rem;
+    }
+
+    .walkin-step__body strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--accent-gold-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .walkin-step__body p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .walkin-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-secondary-subtle);
+    }
+
+    .btn-gold-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: linear-gradient(135deg, var(--accent-gold-primary) 0%, #b8860b 100%);
+      color: #0c0e12;
+      border: 1px solid var(--accent-gold-primary);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+      }
+    }
+
+    .btn-outline-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--surface-secondary-walnut);
+      color: var(--text-primary);
+      border: 1px solid var(--border-secondary-subtle);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+
+      &:hover {
+        border-color: var(--accent-gold-primary);
+        color: var(--accent-gold-primary);
+        transform: translateY(-2px);
+      }
     }
   `]
 })

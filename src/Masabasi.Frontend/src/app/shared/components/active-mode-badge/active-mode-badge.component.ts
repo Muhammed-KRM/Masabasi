@@ -13,7 +13,7 @@ import { ResilientDataService } from '../../../core/services/resilient-data.serv
       [attr.title]="tooltipText()">
       <span class="mode-badge__dot"></span>
       <span class="mode-badge__text">
-        {{ dataService.activeMode() === 'LIVE_API' ? 'Canlı Senkronizasyon' : 'Statik / Çevrimdışı Mod' }}
+        {{ dataService.activeMode() === 'LIVE_API' ? 'Canlı Senkronizasyon' : 'Kadıköy / İstanbul' }}
       </span>
     </div>
   `,

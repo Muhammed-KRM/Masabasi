@@ -24,8 +24,11 @@ import { ActiveModeBadgeComponent } from '../active-mode-badge/active-mode-badge
 
         <!-- Masaüstü Navigasyon Menüsü -->
         <nav class="navbar__nav" aria-label="Ana Menü">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="navbar__link">
+            Ana Sayfa
+          </a>
           <a routerLink="/etkinlikler" routerLinkActive="active" class="navbar__link">
-            Cumartesi Masaları
+            Buluşmalar & Masalar
           </a>
           <a routerLink="/oyun-kutuphanesi" routerLinkActive="active" class="navbar__link">
             Oyun Kütüphanesi
@@ -69,8 +72,11 @@ import { ActiveModeBadgeComponent } from '../active-mode-badge/active-mode-badge
       <!-- Mobil Açılır Menü -->
       @if (isMobileMenuOpen()) {
         <nav class="navbar__mobile-nav" aria-label="Mobil Menü">
+          <a routerLink="/" (click)="closeMobileMenu()" class="navbar__mobile-link">
+            Ana Sayfa
+          </a>
           <a routerLink="/etkinlikler" (click)="closeMobileMenu()" class="navbar__mobile-link">
-            Cumartesi Masaları
+            Buluşmalar & Masalar
           </a>
           <a routerLink="/oyun-kutuphanesi" (click)="closeMobileMenu()" class="navbar__mobile-link">
             Oyun Kütüphanesi

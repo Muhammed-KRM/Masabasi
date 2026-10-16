@@ -4,7 +4,10 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'etkinlikler'
+    loadComponent: () =>
+      import('./pages/home/home-page.component').then(
+        (m) => m.HomePageComponent
+      )
   },
   {
     path: 'etkinlikler',
