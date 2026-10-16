@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Masabasi.API/Masabasi.API.csproj" />
+    <Project Path="src/Masabasi.Business/Masabasi.Business.csproj" />
+    <Project Path="src/Masabasi.Data/Masabasi.Data.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Masabasi.UnitTests/Masabasi.UnitTests.csproj" />
+  </Folder>
+</Solution>
