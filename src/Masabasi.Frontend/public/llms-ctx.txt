@@ -1,0 +1,30 @@
+# Masabaşı Oyun Kulübü — Kapsamlı Topluluk ve Oyun Bağlamı (llms-ctx.txt)
+
+## Kulüp Hakkında
+Masabaşı Oyun Kulübü, İstanbul'da faaliyet gösteren bağımsız bir masaüstü oyun topluluğudur. 
+Her hafta Cumartesi günleri 11:00 - 18:00 saatleri arasında düzenli etkinlikler organize eder.
+Etkinliklerimizde kutu oyunları (Board Game), sosyal çıkarım oyunları (Social Deduction) ve masaüstü rol yapma oyunları (FRP / Tabletop RPG) oynanır.
+
+## Temel Felsefemiz
+- **Yeni Başlayan Dostu:** Kulübümüzdeki tüm masalarda kural bilmeyen oyunculara oyun başlarken kurallar sabırla anlatılır. FRP masalarında hazır karakter kağıtları (pre-generated character sheets) temin edilir.
+- **Topluluk ve Saygı:** Masalarda rekabetten ziyade ortak eğlence, iş birliği ve saygılı iletişim esastır.
+
+## Düzenli Oynanan Kutu Oyunları
+1. **Secret Hitler (Kavgam):** 5-10 oyunculu, faşistler ve liberaller arasındaki entrika ve blöf oyunu.
+2. **Catan (Settlers of Catan):** Ticaret, kaynak yönetimi ve yerleşim kurma klasiği.
+3. **The Resistance: Avalon:** Arthur efsanesi temalı sosyal çıkarım oyunu.
+4. **Carcassonne:** Karo yerleştirme ve kale/yol inşa etme stratejisi.
+5. **Ticket to Ride:** Avrupa tren hatlarını birbirine bağlama stratejisi.
+6. **Blood on the Clocktower:** Gelişmiş sosyal çıkarım ve rol yapma oyunu.
+7. **Dune: Imperium:** İşçi yerleştirme ve deste oluşturma strateji oyunu.
+
+## FRP ve Dungeons & Dragons (D&D 5e) Masaları
+- Masabaşı'nda her Cumartesi hem bağımsız tek oturumluk maceralar (One-Shot) hem de uzun soluklu hikayeler (Campaign) yürütülür.
+- Dungeon Master'larımız (DM) yeni başlayanlar için 1. veya 3. seviye hazır karakterler sunar.
+- 20 yüzlü zar (d20) sistemi, avantaj/dezavantaj kuralları ve rol yapma temelleri etkinlik başında özetlenir.
+
+## Katılım ve Rezervasyon
+- Katılımcılar web sitemiz üzerinden canlı masa rezervasyonu yapabilir ya da Meetup / Instagram hesaplarımız üzerinden topluluğa katılabilir.
+- Web: https://masabasikulubu.com
+- Instagram: https://www.instagram.com/masabasikulubu/
+- Meetup: https://www.meetup.com/tr-tr/masaba%c5%9f%c4%b1-oyun-kulubu/

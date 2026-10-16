@@ -2,6 +2,8 @@ import { Component, ChangeDetectionStrategy, OnInit, inject, signal, computed } 
 import { CommonModule, DatePipe } from '@angular/common';
 import { ResilientDataService } from '../../core/services/resilient-data.service';
 import { TableHubService } from '../../core/services/table-hub.service';
+import { SeoMetaService } from '../../core/services/seo-meta.service';
+import { JsonLdSchemaService } from '../../core/services/json-ld-schema.service';
 import { ClubEventModel, GameTableModel, ReservationResultModel } from '../../core/models/event-table.model';
 import { TableSeatCardComponent } from '../../shared/components/table-seat-card/table-seat-card.component';
 import { TldrAiBoxComponent } from '../../shared/components/tldr-ai-box/tldr-ai-box.component';
@@ -306,6 +308,8 @@ import { ReservationModalComponent } from '../../shared/components/reservation-m
 export class EventsPageComponent implements OnInit {
   private readonly dataService = inject(ResilientDataService);
   private readonly tableHubService = inject(TableHubService);
+  private readonly seoMetaService = inject(SeoMetaService);
+  private readonly jsonLdSchemaService = inject(JsonLdSchemaService);
 
   public readonly isLoading = signal<boolean>(true);
   public readonly currentEvent = signal<ClubEventModel | null>(null);
@@ -332,7 +336,17 @@ export class EventsPageComponent implements OnInit {
     this.dataService.getEvents().subscribe({
       next: (events) => {
         if (events && events.length > 0) {
-          this.currentEvent.set(events[0]);
+          const ev = events[0];
+          this.currentEvent.set(ev);
+          this.seoMetaService.setMeta({
+            title: ev.title,
+            description: ev.tldrSummary,
+            canonicalUrl: 'https://masabasikulubu.com/etkinlikler'
+          });
+          this.jsonLdSchemaService.setSchema([
+            this.jsonLdSchemaService.buildOrganizationSchema(),
+            this.jsonLdSchemaService.buildEventSchema(ev)
+          ]);
         }
         this.isLoading.set(false);
       },

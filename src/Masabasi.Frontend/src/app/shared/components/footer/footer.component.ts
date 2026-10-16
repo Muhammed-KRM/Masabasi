@@ -63,8 +63,8 @@ import { RouterLink } from '@angular/router';
           <ul class="footer__links">
             <li><a href="/llms.txt" target="_blank" rel="noopener">LLMs.txt (AI Dizini)</a></li>
             <li><a href="/sitemap.xml" target="_blank" rel="noopener">XML Site Haritası</a></li>
+            <li><a routerLink="/admin" class="footer__dim">🛡️ Yönetim Paneli</a></li>
             <li><span class="footer__dim">Dual-Mode: API & Statik Dayanıklı</span></li>
-            <li><span class="footer__dim">60-30-10 Renk Standartları</span></li>
           </ul>
         </div>
       </div>

@@ -18,11 +18,70 @@
   <url>
     <loc>https://masabasikulubu.com/frp-dnd-rehberi</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://masabasikulubu.com/blog</loc>
     <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Kutu Oyunları & Kural Rehberleri -->
+  <url>
+    <loc>https://masabasikulubu.com/oyunlar/secret-hitler-kurallari-ve-oynanis-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masabasikulubu.com/oyunlar/catan-nasil-oynanir-takas-ve-strateji-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masabasikulubu.com/oyunlar/dnd-5e-sistemi-ve-masaustu-rol-yapma-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masabasikulubu.com/oyunlar/avalon-sosyal-cikarim-ve-merlin-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masabasikulubu.com/oyunlar/carcassonne-karo-yerlestirme-ve-taktikler</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://masabasikulubu.com/oyunlar/dune-imperium-ispar-ve-deste-yonetimi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic Cluster Makaleleri -->
+  <url>
+    <loc>https://masabasikulubu.com/blog/frp-dnd/dnd-5e-nasil-baslanir-ilk-kez-frp-oynayacaklar-icin-rehber</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://masabasikulubu.com/blog/kutu-oyunlari/secret-hitler-taktikleri-kazanma-stratejileri</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://masabasikulubu.com/blog/kart-oyunlari/magic-the-gathering-commander-formatina-giris</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://masabasikulubu.com/blog/dijitalden-masaustune/baldurs-gate-3ten-gercek-masaya-dnd-gecis-rehberi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://masabasikulubu.com/blog/cosplay-ve-aksesuar/frp-masanizi-canlandirma-minyatur-ve-aksesuarlar</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

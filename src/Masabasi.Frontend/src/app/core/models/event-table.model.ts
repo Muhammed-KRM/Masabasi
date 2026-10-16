@@ -26,6 +26,7 @@ export interface ClubEventModel {
   venueAddress: string;
   meetupEventUrl?: string | null;
   externalRegistrationUrl?: string | null;
+  isActive?: boolean;
   tables: GameTableModel[];
 }
 
