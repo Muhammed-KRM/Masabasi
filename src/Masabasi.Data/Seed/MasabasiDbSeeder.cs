@@ -12,6 +12,9 @@ public static class MasabasiDbSeeder
 {
     public static async Task SeedAsync(MasabasiDbContext context, ILogger? logger = null)
     {
+        // Veritabanı tabloları mevcut değilse otomatik olarak oluştur
+        await context.Database.EnsureCreatedAsync();
+
         // 1. Kutu Oyunları Kataloğu Kontrolü ve Eklenmesi
         if (!await context.BoardGames.AnyAsync())
         {

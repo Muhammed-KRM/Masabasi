@@ -56,14 +56,24 @@ app.use((req, res, next) => {
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
 if (isMainModule(import.meta.url) || process.env['pm_id']) {
-  const port = process.env['PORT'] || 4000;
-  app.listen(port, (error) => {
-    if (error) {
-      throw error;
-    }
-
-    console.log(`Node Express server listening on http://localhost:${port}`);
+  const primaryPort = Number(process.env['PORT']) || 4000;
+  app.listen(primaryPort, () => {
+    console.log(`Node Express server listening on http://localhost:${primaryPort}`);
   });
+
+  // Geriye dönük uyumluluk: 4200 portunu da dinleyerek hem 4000 hem 4200 erişimini garanti altına al
+  if (primaryPort === 4000) {
+    try {
+      const server4200 = app.listen(4200, () => {
+        console.log(`Uyumluluk portu devrede: http://localhost:4200`);
+      });
+      server4200.on('error', () => {
+        // Port 4200 meşgulse sessizce birincil port 4000 ile devam et
+      });
+    } catch {
+      // sessizce geç
+    }
+  }
 }
 
 /**

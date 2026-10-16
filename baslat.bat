@@ -54,27 +54,27 @@ start "Masabasi-API" cmd /k "cd /d "%~dp0src\Masabasi.API" && dotnet run --no-bu
 start "Masabasi-UI" cmd /k "cd /d "%~dp0src\Masabasi.Frontend" && npm start"
 
 if exist "cloudflared.exe" (
-    start "Masabasi-Tunnel" cmd /k "cd /d "%~dp0" && .\cloudflared.exe tunnel --url http://localhost:4200"
+    start "Masabasi-Tunnel" cmd /k "cd /d "%~dp0" && .\cloudflared.exe tunnel --url http://localhost:4000"
 )
 
 echo.
-echo [5/5] Tarayici aciliyor...
-ping 127.0.0.1 -n 7 > nul
-start http://localhost:4200
+echo [5/5] Arayuzun hazir olmasi bekleniyor ve tarayici aciliyor...
+powershell -NoProfile -Command "for ($i=0; $i -lt 30; $i++) { try { $r = (Invoke-WebRequest -Uri 'http://localhost:4000' -UseBasicParsing -TimeoutSec 1).StatusCode; if ($r -ge 200 -and $r -lt 400) { break } } catch {}; Start-Sleep -Seconds 1 }"
+start http://localhost:4000
 start http://localhost:5000/scalar/v1
 
 echo.
 echo ========================================================
 echo Masabasi Oyun Kulubu Sistemi Basariyla Baslatildi!
 echo --------------------------------------------------------
-echo Web Vitrin (Angular): http://localhost:4200
-echo Oyun Kutuphanesi:     http://localhost:4200/oyun-kutuphanesi
-echo FRP D ve D Rehberi:   http://localhost:4200/frp-dnd-rehberi
-echo Topic Cluster Blog:   http://localhost:4200/blog
-echo Izole Admin Paneli:   http://localhost:4200/admin
-echo .NET 10 API (Scalar): http://localhost:5000/scalar/v1
-echo API Saglik Durumu:    http://localhost:5000/health
-echo Cloudflare Tuneli:    "Masabasi-Tunnel" penceresinde acik
+echo Web Vitrin (Angular SSR): http://localhost:4000 (veya :4200)
+echo Oyun Kutuphanesi:         http://localhost:4000/oyun-kutuphanesi
+echo FRP D ve D Rehberi:       http://localhost:4000/frp-dnd-rehberi
+echo Topic Cluster Blog:       http://localhost:4000/blog
+echo Izole Admin Paneli:       http://localhost:4000/admin
+echo .NET 10 API (Scalar):     http://localhost:5000/scalar/v1
+echo API Saglik Durumu:        http://localhost:5000/health
+echo Cloudflare Tuneli:        "Masabasi-Tunnel" penceresinde acik
 echo ========================================================
 echo Bu pencereyi kapatabilirsiniz. Servisler arka planda calismaktadir.
 pause
