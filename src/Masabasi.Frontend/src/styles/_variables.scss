@@ -1,0 +1,74 @@
+// ============================================================================
+// MASABAŞI OYUN KULÜBÜ — 60-30-10 RENK TEORİSİ VE TASARIM SİSTEMİ TOKENLARI
+// ============================================================================
+
+:root {
+  // --- VARSAYILAN TEMA: KOYU ("TAVERNA & ZİNDAN" ATMOSFERİ) ---
+
+  // %60 DOMİNANT: Arka Plan ve Geniş Okuma Yüzeyleri
+  --bg-dominant-primary: #121619;     // Derin Arduvaz / Gece Kömürü
+  --bg-dominant-elevated: #1A2126;    // Koyu Çam Yüzeyi
+  --bg-glass: rgba(18, 22, 25, 0.85); // Glassmorphism arka planı
+  --text-primary: #F4EFE6;            // Sıcak Parşömen Kremi (WCAG AAA kontrast)
+  --text-muted: #B8B0A4;              // Küllü Parşömen (İkincil metinler)
+
+  // %30 SEKONDER: Kulüp Marka Kimliği (Zümrüt Yeşil & Ceviz Ahşap)
+  --surface-secondary-emerald: #1E3A34;       // Masabaşı Zümrüt / Adaçayı Yeşili
+  --surface-secondary-emerald-hover: #2A524A;
+  --surface-secondary-walnut: #2C221E;        // Ceviz Masa Ahşabı (Masa Kartları)
+  --surface-secondary-walnut-hover: #3B2E28;
+  --border-secondary-subtle: #2F4F46;
+  --border-card: rgba(212, 175, 55, 0.2);
+
+  // %10 VURGU (ACCENT): Aksiyon Butonları, Logo Altını ve D20 Kritik Zar Kızılı
+  --accent-gold-primary: #D4AF37;       // Logo Pirinç / Altın Halkası
+  --accent-gold-hover: #E5C158;
+  --accent-gold-contrast-text: #121619; // Altın buton üzerindeki koyu metin
+  --accent-crimson-d20: #E05A47;        // Kritik Zar (Nat 20) Kızılı ("Son 1 Koltuk!")
+  --accent-crimson-bg: rgba(224, 90, 71, 0.15);
+  --accent-success-seat: #34D399;       // Boş koltuk göstergesi
+  --accent-success-bg: rgba(52, 211, 153, 0.15);
+
+  // Gölgeler ve Efektler
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 0 20px rgba(212, 175, 55, 0.25);
+
+  // Tipografi
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+// --- AÇIK TEMA ("PARŞÖMEN & GÜNDÜZ KAFE" OKUMA MODU) ---
+[data-theme='parchment'] {
+  // %60 DOMİNANT
+  --bg-dominant-primary: #FAF6F0;     // Sıcak Parşömen Kremi
+  --bg-dominant-elevated: #F0E9DF;    // Yumuşak Keten
+  --bg-glass: rgba(250, 246, 240, 0.88);
+  --text-primary: #1C2226;            // Koyu Mürekkep
+  --text-muted: #525B62;
+
+  // %30 SEKONDER
+  --surface-secondary-emerald: #264E46;
+  --surface-secondary-emerald-hover: #1E3A34;
+  --surface-secondary-walnut: #EAE0D2;
+  --surface-secondary-walnut-hover: #DFD3C1;
+  --border-secondary-subtle: #D8CBB8;
+  --border-card: rgba(184, 134, 11, 0.3);
+
+  // %10 VURGU
+  --accent-gold-primary: #B8860B;
+  --accent-gold-hover: #9A7009;
+  --accent-gold-contrast-text: #FFFFFF;
+  --accent-crimson-d20: #C84B31;
+  --accent-crimson-bg: rgba(200, 75, 49, 0.12);
+  --accent-success-seat: #059669;
+  --accent-success-bg: rgba(5, 150, 105, 0.12);
+
+  // Gölgeler
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 0 16px rgba(184, 134, 11, 0.2);
+}

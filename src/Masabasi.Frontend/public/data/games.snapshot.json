@@ -1,0 +1,50 @@
+[
+  {
+    "id": "11111111-1111-1111-1111-111111111101",
+    "title": "Secret Hitler (Kavgam)",
+    "slug": "secret-hitler-kurallari-ve-oynanis-rehberi",
+    "category": "SocialDeduction",
+    "minPlayers": 5,
+    "maxPlayers": 10,
+    "recommendedPlayerCount": "7-8 Oyuncu",
+    "playTimeMinutes": 45,
+    "complexityRating": 2.1,
+    "tldrSummary": "Secret Hitler, 1930'lar Almanyasında liberaller ve gizli faşistler arasındaki siyasi mücadeleyi konu alan tempolu bir sosyal çıkarım ve blöf oyunudur.",
+    "rulesMarkdown": "### Secret Hitler Nedir?\nSecret Hitler, 5-10 kişiyle oynanan ve oyuncuların birbirlerinin rollerini çözmeye çalıştığı bir sosyal çıkarım oyunudur.",
+    "imageUrl": null,
+    "isInClubInventory": true,
+    "yearPublished": 2016
+  },
+  {
+    "id": "11111111-1111-1111-1111-111111111102",
+    "title": "Catan (Settlers of Catan)",
+    "slug": "catan-nasil-oynanir-takas-ve-strateji-rehberi",
+    "category": "BoardGame",
+    "minPlayers": 3,
+    "maxPlayers": 4,
+    "recommendedPlayerCount": "4 Oyuncu",
+    "playTimeMinutes": 75,
+    "complexityRating": 2.3,
+    "tldrSummary": "Catan, oyuncuların ada üzerindeki hammaddeleri toplayıp takas ederek yollar ve köyler kurduğu modern kutu oyunlarının öncüsüdür.",
+    "rulesMarkdown": "### Catan Temel Kuralları\nCatan adasına hoş geldiniz! Oyunda amaç ilk 10 zafer puanına ulaşmaktır.",
+    "imageUrl": null,
+    "isInClubInventory": true,
+    "yearPublished": 1995
+  },
+  {
+    "id": "11111111-1111-1111-1111-111111111103",
+    "title": "Dungeons & Dragons 5th Edition (D&D 5e)",
+    "slug": "dnd-5e-sistemi-ve-masaustu-rol-yapma-rehberi",
+    "category": "FRP_DnD",
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "recommendedPlayerCount": "4-5 Oyuncu + 1 DM",
+    "playTimeMinutes": 240,
+    "complexityRating": 3.0,
+    "tldrSummary": "Dungeons & Dragons 5e, hayal gücü, 20 yüzlü zarlar (d20) ve kural kitapları eşliğinde ortak hikaye anlatımı yapılan dünyanın en popüler masaüstü FRP sistemidir.",
+    "rulesMarkdown": "### D&D 5e Temel Dinamikleri\nD&D'de bir Dungeon Master (DM) dünyayı anlatır, oyuncular ise kendi yarattıkları karakterleri yönetir.",
+    "imageUrl": null,
+    "isInClubInventory": true,
+    "yearPublished": 2014
+  }
+]

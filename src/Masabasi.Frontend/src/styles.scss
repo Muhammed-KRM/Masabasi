@@ -1,0 +1,166 @@
+@use 'styles/variables' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dominant-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: var(--accent-gold-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--accent-gold-hover);
+  }
+}
+
+p {
+  color: var(--text-muted);
+}
+
+// Genel Buton Stilleri (60-30-10 Kuralı: %10 Vurgu)
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-gold-primary);
+  color: var(--accent-gold-contrast-text);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-gold);
+  transition: all 0.25s ease;
+  text-decoration: none;
+
+  &:hover:not(:disabled) {
+    background-color: var(--accent-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--accent-gold-primary);
+  border: 1.5px solid var(--accent-gold-primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(212, 175, 55, 0.12);
+    border-color: var(--accent-gold-hover);
+    color: var(--accent-gold-hover);
+  }
+}
+
+.btn-disabled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(184, 176, 164, 0.15);
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-secondary-subtle);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+// Genel Rozetler
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+
+  &--emerald {
+    background-color: var(--surface-secondary-emerald);
+    color: var(--accent-gold-primary);
+    border: 1px solid var(--border-secondary-subtle);
+  }
+
+  &--crimson {
+    background-color: var(--accent-crimson-bg);
+    color: var(--accent-crimson-d20);
+    border: 1px solid rgba(224, 90, 71, 0.3);
+  }
+
+  &--success {
+    background-color: var(--accent-success-bg);
+    color: var(--accent-success-seat);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+  }
+}
+
+// Konteyner
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// Parşömen Kart Efekti
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-secondary-subtle);
+  border-radius: 12px;
+}
