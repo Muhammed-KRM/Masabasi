@@ -16,7 +16,7 @@ import { RouterLink } from '@angular/router';
             <span class="footer__title">MASABAŞI OYUN KULÜBÜ</span>
           </div>
           <p class="footer__desc">
-            İstanbul'da her Cumartesi modern kutu oyunları, sosyal çıkarım ve D&D 5e FRP maceraları için toplanan bağımsız masaüstü oyun topluluğu.
+            İstanbul Bakırköy Periwinkle Cafe'de her Cumartesi 13:00 - 19:00 arası modern kutu oyunları (Catan, Terraforming Mars, Root) ve masaüstü maceraları için toplanan bağımsız oyun topluluğu.
           </p>
           <div class="footer__socials">
             <a

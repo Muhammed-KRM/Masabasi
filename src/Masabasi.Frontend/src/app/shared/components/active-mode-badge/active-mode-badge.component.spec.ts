@@ -40,6 +40,6 @@ describe('ActiveModeBadgeComponent', () => {
 
     const el = fixture.nativeElement as HTMLElement;
     expect(el.querySelector('.mode-badge--static')).toBeTruthy();
-    expect(el.textContent).toContain('Kadıköy / İstanbul');
+    expect(el.textContent).toContain('Bakırköy / İstanbul');
   });
 });

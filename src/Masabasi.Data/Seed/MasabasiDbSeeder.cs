@@ -195,20 +195,19 @@ Video oyununda oyun motorunun izin verdiği kadar seçeneğiniz vardır. Ancak m
             var today = DateTime.UtcNow;
             int daysUntilSaturday = ((int)DayOfWeek.Saturday - (int)today.DayOfWeek + 7) % 7;
             if (daysUntilSaturday == 0) daysUntilSaturday = 7;
-            var saturdayDate = today.AddDays(daysUntilSaturday).Date;
-            var eventStartUtc = new DateTimeOffset(saturdayDate.Year, saturdayDate.Month, saturdayDate.Day, 11, 0, 0, TimeSpan.Zero);
-            var eventEndUtc = eventStartUtc.AddHours(7);
+            var eventStartUtc = new DateTimeOffset(saturdayDate.Year, saturdayDate.Month, saturdayDate.Day, 10, 0, 0, TimeSpan.Zero);
+            var eventEndUtc = eventStartUtc.AddHours(6);
 
             var saturdayEvent = new ClubEvent
             {
                 Id = Guid.Parse("33333333-3333-3333-3333-333333333301"),
-                Title = $"Masabaşı Cumartesi Buluşması: Kutu Oyunları & FRP Masaları ({saturdayDate:dd MMMM yyyy})",
-                Slug = $"cumartesi-bulusmasi-{saturdayDate:dd-MMMM-yyyy}".ToLower().Replace(" ", "-"),
-                TldrSummary = "Masabaşı Oyun Kulübü olarak bu Cumartesi Kadıköy'de modern kutu oyunları (Catan, Ticket to Ride, Avalon) ve yeni başlayanlara açık D&D 5e FRP masaları için buluşuyoruz. Kurallar masada anlatılacaktır.",
+                Title = $"İstanbul - Board Game Buluşması: Catan, Terraforming Mars, Root ({saturdayDate:dd MMMM yyyy})",
+                Slug = $"istanbul-board-game-bulusmasi-{saturdayDate:dd-MMMM-yyyy}".ToLower().Replace(" ", "-"),
+                TldrSummary = "Masabaşı Oyun Kulübü olarak her Cumartesi Bakırköy Periwinkle Cafe'de toplanıyoruz. Catan, Terraforming Mars, Root ve çok daha fazlasını birlikte deneyimliyoruz. Kuralları masada birlikte öğreniyoruz.",
                 StartDateUtc = eventStartUtc,
                 EndDateUtc = eventEndUtc,
-                VenueName = "Masabaşı Buluşma Mekanı - Kadıköy",
-                VenueAddress = "Kadıköy / İstanbul (Detaylı adres kayıt onayında iletilir)",
+                VenueName = "Periwinkle Boardgame Cafe",
+                VenueAddress = "Kartaltepe, Gençler Cad. D:8A, 34145 Bakırköy / İstanbul",
                 MeetupEventUrl = "https://www.meetup.com/tr-tr/masaba%c5%9f%c4%b1-oyun-kulubu/events/316644892/",
                 ExternalRegistrationUrl = "https://www.instagram.com/masabasikulubu/",
                 IsActive = true,

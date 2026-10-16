@@ -41,7 +41,7 @@ interface FaqItem {
         <div class="container home-hero__container">
           <div class="home-hero__badge">
             <span class="home-hero__badge-dot" aria-hidden="true"></span>
-            <span>Kadıköy / İstanbul • Her Cumartesi Yüz Yüze Masaüstü Oyun Buluşmaları</span>
+            <span>Bakırköy Periwinkle Cafe • Her Cumartesi 13:00 - 19:00</span>
           </div>
 
           <h1 id="hero-title" class="home-hero__title">
@@ -49,13 +49,14 @@ interface FaqItem {
           </h1>
 
           <p class="home-hero__lead">
-            Ekranları kapatıyoruz, zarları atıyoruz. Kadıköy'ün merkezinde modern kutu oyunları,
-            FRP maceraları ve samimi dostluklar için aynı masada buluşuyoruz.
+            Hafta sonu planın hazır! ✨ İstanbul'da her Cumartesi düzenlediğimiz kutu oyunu buluşmalarında
+            masalar kuruluyor; zarlar atılıyor, yeni dostluklar filizleniyor.
           </p>
 
           <p class="home-hero__sublead">
-            İster tek başınıza gelin, ister arkadaşlarınızla; kuralları her zaman masada sabırla anlatıyoruz.
-            Burada herkese açık bir sandalye var.
+            <strong>Catan, Terraforming Mars, Root</strong> ve 150'den fazla modern kutu oyununu birlikte deneyimliyoruz.
+            "Kuralları bilmiyorum" diye hiç çekinme; masada her şeyi birlikte öğreniyoruz.
+            İster tek başına gel yeni insanlarla tanış, ister arkadaşını kap gel!
           </p>
 
           <div class="home-hero__actions">
@@ -66,7 +67,7 @@ interface FaqItem {
               rel="noopener noreferrer"
               class="btn btn--primary">
               <span class="btn__icon" aria-hidden="true">🤝</span>
-              <span>Meetup ile Topluluğa Katıl</span>
+              <span>Meetup ile Buluşmaya Katıl</span>
             </a>
 
             <a
@@ -76,7 +77,7 @@ interface FaqItem {
               rel="noopener noreferrer"
               class="btn btn--secondary">
               <span class="btn__icon" aria-hidden="true">📸</span>
-              <span>Instagram'da Takip Et</span>
+              <span>Instagram Katılım Formu</span>
             </a>
 
             <a
@@ -84,33 +85,33 @@ interface FaqItem {
               routerLink="/etkinlikler"
               class="btn btn--ghost">
               <span class="btn__icon" aria-hidden="true">📅</span>
-              <span>Haftalık Buluşma Detayları</span>
+              <span>Buluşma Detayları & Mekan</span>
             </a>
           </div>
 
           <!-- Hızlı Vurgular / İstatistik Kartları -->
           <div class="home-hero__stats">
             <div class="stat-card">
-              <span class="stat-card__icon" aria-hidden="true">🎲</span>
+              <span class="stat-card__icon" aria-hidden="true">🪐</span>
               <div class="stat-card__body">
-                <strong>50+ Modern Kutu Oyunu</strong>
-                <span>Catan, Avalon, Terraforming Mars, Ticket to Ride ve fazlası</span>
+                <strong>Modern & Klasik Oyunlar</strong>
+                <span>Catan, Terraforming Mars, Root, Avalon, Dune ve 150+ oyun</span>
               </div>
             </div>
 
             <div class="stat-card">
-              <span class="stat-card__icon" aria-hidden="true">⚔️</span>
+              <span class="stat-card__icon" aria-hidden="true">☕</span>
               <div class="stat-card__body">
-                <strong>D&D 5e & FRP Masaları</strong>
-                <span>Yeni başlayanlara açık, DM anlatımlı fantastik maceralar</span>
+                <strong>Periwinkle Boardgame Cafe</strong>
+                <span>Bakırköy Kartaltepe'de ferah oyun salonu ve zengin kafe menüsü</span>
               </div>
             </div>
 
             <div class="stat-card">
-              <span class="stat-card__icon" aria-hidden="true">📍</span>
+              <span class="stat-card__icon" aria-hidden="true">🚆</span>
               <div class="stat-card__body">
-                <strong>Kadıköy / İstanbul</strong>
-                <span>Vapur, metro ve metrobüse yakın, ferah ve güvenli mekanlar</span>
+                <strong>Marmaray'a Yürüme Mesafesi</strong>
+                <span>Bakırköy Marmaray ve Meydan'a birkaç dakika uzaklıkta merkezi konum</span>
               </div>
             </div>
 
@@ -118,7 +119,7 @@ interface FaqItem {
               <span class="stat-card__icon" aria-hidden="true">🤝</span>
               <div class="stat-card__body">
                 <strong>%100 Yeni Başlayan Dostu</strong>
-                <span>Önceden oyun bilmenize gerek yok, kurallar masada öğretilir</span>
+                <span>Tek başına gelebilirsin; kurallar her masada sabırla anlatılır</span>
               </div>
             </div>
           </div>
@@ -130,10 +131,10 @@ interface FaqItem {
         <div class="container">
           <div class="section-header">
             <span class="section-eyebrow">Biz Kimiz & Ne Yapıyoruz?</span>
-            <h2 id="about-heading" class="section-title">Masabaşı Oyun Kulübü'nün Kuruluş Amacı</h2>
+            <h2 id="about-heading" class="section-title">Masabaşı Oyun Kulübü'nün Ruhu</h2>
             <p class="section-subtitle">
-              Sadece kutu oyunu oynamıyoruz; dijital ekranların yorduğu zihinleri tazeleyen,
-              yüz yüze iletişimi ve samimi dostlukları yeniden canlandıran bağımsız bir topluluğuz.
+              Meetup üzerinde 1000'e yakın üyesi ve 4.9 puanlı topluluğuyla; İstanbul'un dört bir yanından
+              kutu oyunu ve masaüstü tutkunlarını aynı masada bir araya getiren bağımsız bir topluluğuz.
             </p>
           </div>
 
@@ -142,74 +143,81 @@ interface FaqItem {
               <div class="about-card__icon-wrapper" aria-hidden="true">
                 <span class="about-card__icon">📵</span>
               </div>
-              <h3 class="about-card__title">Dijitalden Masaya Dönüş</h3>
+              <h3 class="about-card__title">Ekranları Kapatıp Masaya Oturuyoruz</h3>
               <p class="about-card__text">
-                Telefonların ve bilgisayar ekranlarının esiri olduğumuz günümüz dünyasında,
-                telefonları masanın kenarına bırakıp birbiriyle göz teması kuran, sohbet eden ve
-                aynı masada gülen insanları bir araya getirmek için kurulduk.
+                Haftanın yorgunluğunu dijital ekranlar başında değil; yüz yüze göz teması kurarak,
+                kart çekerek, takas pazarlıkları yaparak ve ortak kahkahalar atarak geride bırakıyoruz.
               </p>
             </article>
 
             <article class="about-card">
               <div class="about-card__icon-wrapper" aria-hidden="true">
-                <span class="about-card__icon">🌱</span>
+                <span class="about-card__icon">🎲</span>
               </div>
-              <h3 class="about-card__title">Yeni Başlayanlara Kucak Açma</h3>
+              <h3 class="about-card__title">Birlikte Öğreniyor, Birlikte Oynuyoruz</h3>
               <p class="about-card__text">
-                "Ben kutu oyunu bilmiyorum", "D&D zarlarını nasıl atacağımı bilmiyorum", "Oynayanlar çok tecrübelidir,
-                aralarına giremem" gibi çekinceleri tamamen ortadan kaldırıyoruz. Her masada sabırla kural anlatan
-                moderatörlerimiz ve gönüllülerimiz vardır.
+                "Kuralları bilmiyorum" çekincesi Masabaşı'nda geçerli değildir! Masada her oyunu
+                birlikte öğrenir, deneyimli oyuncularımız ve anlatıcılarımızla ilk turdan itibaren
+                oyunun ritmini yakalamanızı sağlarız.
               </p>
             </article>
 
             <article class="about-card">
               <div class="about-card__icon-wrapper" aria-hidden="true">
-                <span class="about-card__icon">🛡️</span>
+                <span class="about-card__icon">🤗</span>
               </div>
-              <h3 class="about-card__title">Kapsayıcı, Güvenli ve Saygılı Ortam</h3>
+              <h3 class="about-card__title">Tek Başına Gel, Yeni Bir Çevre Edin</h3>
               <p class="about-card__text">
-                Kapımızdan adım atan herkes için zorbalıktan, üstenci tavırlardan uzak; nezaket,
-                saygı ve karşılıklı hoşgörünün esas olduğu güvenli bir sosyal oyun alanı sunuyoruz.
-                Burada herkes eşittir ve eğlence ortaktır.
+                Buluşmalarımıza katılanların büyük çoğunluğu ilk etkinliğe tek başına gelir.
+                Kapıdan girdiğiniz andan itibaren sıcak bir karşılamayla masalara davet edilir,
+                günün sonunda yeni arkadaşlıklarla ayrılırsınız.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- 3. Nerede ve Ne Zaman Buluşuyoruz? -->
+      <!-- 3. Nerede ve Ne Zaman Buluşuyoruz? (Bakırköy Periwinkle Cafe Detayı) -->
       <section class="section venue-section" aria-labelledby="venue-heading">
         <div class="container">
           <div class="venue-card">
             <div class="venue-card__content">
-              <span class="section-eyebrow">Buluşma Noktamız</span>
-              <h2 id="venue-heading" class="venue-card__title">Nerede ve Ne Zaman Buluşuyoruz?</h2>
+              <span class="section-eyebrow">Resmi Buluşma Mekanımız</span>
+              <h2 id="venue-heading" class="venue-card__title">Bakırköy Periwinkle Boardgame Cafe</h2>
               <p class="venue-card__lead">
-                İstanbul'un en hareketli ve merkezi kültür noktası olan <strong>Kadıköy</strong>'de toplanıyoruz.
+                İstanbul'un en köklü ve ferah kutu oyunu mekanlarından biri olan <strong>Periwinkle Cafe</strong>'de her hafta Cumartesi günleri toplanıyoruz.
               </p>
 
               <div class="venue-details">
                 <div class="venue-item">
                   <span class="venue-item__icon" aria-hidden="true">📍</span>
                   <div>
-                    <strong>Konum & Ulaşım</strong>
-                    <p>Kadıköy / İstanbul (Moda ve Rıhtım çevresi). Metro, metrobüs, vapur ve Marmaray hatlarına birkaç dakikalık yürüme mesafesinde.</p>
+                    <strong>Açık Adres</strong>
+                    <p>Kartaltepe Mahallesi, Gençler Caddesi No:8A, 34145 Bakırköy / İstanbul</p>
+                  </div>
+                </div>
+
+                <div class="venue-item">
+                  <span class="venue-item__icon" aria-hidden="true">🚆</span>
+                  <div>
+                    <strong>Ulaşım Kolaylığı</strong>
+                    <p><strong>Bakırköy Marmaray</strong> durağına ve <strong>Bakırköy Cumhuriyet (Özgürlük) Meydanı</strong>'na yalnızca birkaç dakikalık yürüme mesafesindedir. Metrobüs İncirli durağından tek vesayetle kolayca ulaşılabilir.</p>
                   </div>
                 </div>
 
                 <div class="venue-item">
                   <span class="venue-item__icon" aria-hidden="true">⏰</span>
                   <div>
-                    <strong>Buluşma Zamanı</strong>
-                    <p>Her Cumartesi günü saat 11:00'de başlar, akşam 18:00 ve sonrasına kadar gün boyu devam eder. Dilediğiniz saatte katılıp ayrılabilirsiniz.</p>
+                    <strong>Buluşma Günü ve Saatleri</strong>
+                    <p><strong>Her Cumartesi 13:00 - 19:00</strong> arasında ana buluşmamız gerçekleşir. Dileyen oyuncular kafenin açık olduğu saatler boyunca (gece 01:00'e kadar) oyunlara devam edebilir.</p>
                   </div>
                 </div>
 
                 <div class="venue-item">
                   <span class="venue-item__icon" aria-hidden="true">☕</span>
                   <div>
-                    <strong>Mekan ve Atmosfer</strong>
-                    <p>Masaüstü oyunlarına özel geniş masalara sahip, çay-kahve ve yemek servisi bulunan, aydınlık, ferah ve nezih kafeler/mekanlar tercih edilir.</p>
+                    <strong>Mekan İmkanları</strong>
+                    <p>Geniş ahşap oyun masaları, 150+ kutu oyunu arşivi, lezzetli kahve & atıştırmalık menüsü ve konforlu havalandırmalı ortam.</p>
                   </div>
                 </div>
               </div>
@@ -220,33 +228,36 @@ interface FaqItem {
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn--primary">
-                  <span>Bu Cumartesi Buluşmasını İncele</span>
+                  <span>Meetup'ta Harita & Detayları Gör</span>
                 </a>
               </div>
             </div>
 
             <div class="venue-card__side">
               <div class="quote-box">
-                <div class="quote-box__emblem" aria-hidden="true">🎲</div>
+                <div class="quote-box__emblem" aria-hidden="true">🪐</div>
                 <blockquote class="quote-box__quote">
                   "Masabaşı sadece kutu oyunları oynanan bir yer değil; yalnız hissettiğiniz bir Cumartesi gününde
                   aynı masayı paylaşıp kahkahalarla dostluk kurabileceğiniz sıcacık bir limandır."
                 </blockquote>
                 <cite class="quote-box__author">— Masabaşı Oyun Kulübü Topluluğu</cite>
+                <div class="quote-box__rating">
+                  <span>⭐ 4.9 / 5.0 (Meetup Topluluk Puanı)</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 4. Ne Tarz Oyunlar Oynanıyor? (4 Temel Kategori) -->
+      <!-- 4. Ne Tarz Oyunlar Oynanıyor? (Catan, Terraforming Mars, Root, FRP & Parti) -->
       <section class="section games-section" aria-labelledby="games-heading">
         <div class="container">
           <div class="section-header">
-            <span class="section-eyebrow">Oyun Dünyamız</span>
-            <h2 id="games-heading" class="section-title">Masalarımızda Hangi Oyunlar Oynanıyor?</h2>
+            <span class="section-eyebrow">Masalarımızdaki Oyunlar</span>
+            <h2 id="games-heading" class="section-title">Hangi Oyunları Oynuyoruz?</h2>
             <p class="section-subtitle">
-              Her zevke, her oyun tarzına ve her deneyim seviyesine uygun onlarca farklı oyun seçeneği sunuyoruz.
+              Terraforming Mars'ın derin stratejisinden Catan'ın ticaret pazarlıklarına, Root'un asimetrik orman savaşlarından Secret Hitler'in blöflerine kadar zengin bir yelpaze!
             </p>
           </div>
 
@@ -286,7 +297,7 @@ interface FaqItem {
             <span class="section-eyebrow">İlk Kez Gelecekler İçin</span>
             <h2 id="steps-heading" class="section-title">Etkinliklerimize Nasıl Katılabilirsiniz?</h2>
             <p class="section-subtitle">
-              Katılmak sandığınızdan çok daha kolay. Hiçbir sınav, ön hazırlık veya grup gereksinimi yok!
+              Önceden bir ekibinizin veya ileri düzey oyun bilginizin olmasına gerek yok! İşte adım adım katılım:
             </p>
           </div>
 
@@ -308,14 +319,14 @@ interface FaqItem {
 
           <div class="steps-cta">
             <div class="steps-cta__inner">
-              <h3>Hemen Bir Sonraki Masada Yerinizi Alın!</h3>
-              <p>Topluluk yöneticilerimiz ve diğer oyuncular sizinle tanışmak için sabırsızlanıyor.</p>
+              <h3>Bu Cumartesi Masada Yerinizi Alın!</h3>
+              <p>Meetup etkinliğimize katılarak kaç kişi geleceğinizi bildirin veya Instagram bio'muzdan formu doldurun.</p>
               <div class="steps-cta__buttons">
                 <a [href]="meetupUrl" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-                  Meetup Sayfamıza Git
+                  Meetup Etkinliğine Katıl (13:00)
                 </a>
                 <a [href]="instagramUrl" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
-                  Instagram'dan Bize Yazın
+                  Instagram (&#64;masabasikulubu)
                 </a>
               </div>
             </div>
@@ -330,7 +341,7 @@ interface FaqItem {
             <span class="section-eyebrow">Merak Edilenler</span>
             <h2 id="faq-heading" class="section-title">Sıkça Sorulan Sorular</h2>
             <p class="section-subtitle">
-              Aklınıza takılan soruların yanıtlarını aşağıda bulabilirsiniz.
+              Buluşmalarımız ve Periwinkle Cafe işleyişi hakkında merak edilen tüm detaylar:
             </p>
           </div>
 
@@ -352,17 +363,17 @@ interface FaqItem {
       <section class="section cta-section" aria-labelledby="cta-heading">
         <div class="container">
           <div class="cta-banner">
-            <span class="section-eyebrow">Kadıköy Buluşmaları</span>
+            <span class="section-eyebrow">Bakırköy Periwinkle Buluşmaları</span>
             <h2 id="cta-heading" class="cta-banner__title">
               Zarlar Masada, Sıradaki Hamle Sizin!
             </h2>
             <p class="cta-banner__lead">
-              Cumartesi gününüzü evde ekrana bakarak geçirmek yerine; sıcacık çaylar eşliğinde
-              yeni insanlarla tanışın, zarlar atın ve unutulmaz masaüstü maceralarına ortak olun.
+              Cumartesi gününüzü evde ekrana bakarak geçirmek yerine; Bakırköy Periwinkle Cafe'de sıcacık kahveler eşliğinde
+              yeni insanlarla tanışın, Catan, Terraforming Mars ve Root masalarına ortak olun.
             </p>
             <div class="cta-banner__actions">
               <a [href]="meetupUrl" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-                Meetup ile Üye Ol
+                Meetup ile Katıl
               </a>
               <a [href]="instagramUrl" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
                 Instagram Hesabımız (&#64;masabasikulubu)
@@ -437,7 +448,7 @@ interface FaqItem {
       line-height: 1.6;
       color: var(--accent-gold-primary);
       font-family: var(--font-display);
-      max-width: 780px;
+      max-width: 820px;
       margin-bottom: 1rem;
 
       @media (min-width: 768px) {
@@ -449,7 +460,7 @@ interface FaqItem {
       font-size: 1.05rem;
       line-height: 1.7;
       color: var(--text-muted);
-      max-width: 720px;
+      max-width: 760px;
       margin-bottom: 2.5rem;
     }
 
@@ -765,6 +776,14 @@ interface FaqItem {
       color: var(--accent-gold-primary);
       font-weight: 700;
       letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .quote-box__rating {
+      font-size: 0.85rem;
+      color: #fbbf24;
+      font-weight: 600;
     }
 
     /* Games Section */
@@ -1081,12 +1100,12 @@ export class HomePageComponent implements OnInit {
 
   public readonly gameCategories: GameCategoryShowcase[] = [
     {
-      id: 'board-games',
-      icon: '♟️',
+      id: 'modern-board-games',
+      icon: '🪐',
       badge: 'Strateji & Kaynak',
       title: 'Modern Kutu Oyunları',
-      games: ['Catan', 'Ticket to Ride: Europe', 'Carcassonne', 'Terraforming Mars', '7 Wonders', 'Wingspan'],
-      description: 'Zar atmanın ötesine geçen, kaynak yönetimi, takas, rota kurma ve derin strateji sunan dünyanın en seçkin masaüstü oyunları.',
+      games: ['Terraforming Mars', 'Catan', 'Root', 'Ticket to Ride: Europe', 'Dune: Imperium', 'Carcassonne'],
+      description: 'Zar atmanın ötesine geçen, kaynak yönetimi, asimetrik güç dengeleri, takas ve derin strateji sunan modern masaüstü klasikleri.',
       detailLinkText: 'Kutu Oyunu Kütüphanesini İncele',
       detailRoute: '/oyun-kutuphanesi'
     },
@@ -1105,7 +1124,7 @@ export class HomePageComponent implements OnInit {
       icon: '🎭',
       badge: 'Blöf & Kahkaha',
       title: 'Sosyal Çıkarım & Parti',
-      games: ['Secret Hitler', 'The Resistance: Avalon', 'Blood on the Clocktower', 'Codenames', 'Spyfall'],
+      games: ['The Resistance: Avalon', 'Secret Hitler', 'Blood on the Clocktower', 'Codenames', 'Spyfall'],
       description: 'Kim faşist, kim büyücü, kim doğruyu söylüyor? Kalabalık gruplarla buzları eriten, bol kahkahalı ve dedüksiyon dolu masa oyunları.',
       detailLinkText: 'Sosyal Çıkarım Stratejileri',
       detailRoute: '/blog'
@@ -1113,10 +1132,10 @@ export class HomePageComponent implements OnInit {
     {
       id: 'quick-fun',
       icon: '🃏',
-      badge: 'Hızlı & Dinamik',
-      title: 'Hafif & Eğlenceli Kart Oyunları',
+      badge: 'Hafif & Eğlenceli',
+      title: 'Parti & Kart Oyunları',
       games: ['Love Letter', 'Exploding Kittens', 'Saboteur', 'Dixit', 'Sushi Go!'],
-      description: '5 dakikada öğrenilen, hızlı turlarla dönen, çayınızı içerken neşeyle masayı ısıtan hafif ve eğlenceli parti oyunları.',
+      description: '5 dakikada öğrenilen, hızlı turlarla dönen, çayınızı veya kahvenizi içerken masayı ısıtan hafif ve eğlenceli parti oyunları.',
       detailLinkText: 'Kütüphaneyi Keşfet',
       detailRoute: '/oyun-kutuphanesi'
     }
@@ -1125,35 +1144,35 @@ export class HomePageComponent implements OnInit {
   public readonly steps: StepItem[] = [
     {
       number: '01',
-      title: 'Topluluğa Katılın',
-      description: 'Meetup sayfamıza üye olun veya Instagram hesabımızı (@masabasikulubu) takip edin. Haftalık Cumartesi duyuruları ilk olarak buralarda paylaşılır.',
-      highlight: 'Üyelik tamamen ücretsizdir.'
+      title: 'Meetup veya Instagram\'dan Katılın',
+      description: 'Meetup etkinliğimize katılım bildirimi (RSVP) yapın veya Instagram (@masabasikulubu) profilimizdeki katılım formunu doldurun.',
+      highlight: 'Topluluğa katılım ve etkinlik duyuruları tamamen ücretsizdir.'
     },
     {
       number: '02',
-      title: 'Tek Başınıza Gelin',
-      description: 'Katılmak için önceden bir oyun ekibine sahip olmanız gerekmez! Topluluğumuzdaki insanların çoğu ilk etkinliğe tek başına gelerek yeni arkadaşlar edinmiştir.',
-      highlight: 'Kapıda karşılanıp açık masalara yönlendirilirsiniz.'
+      title: 'Tek Başına veya Arkadaşlarınla Gel',
+      description: 'Katılmak için önceden bir oyun ekibine sahip olman gerekmez! Topluluğumuzdaki insanların çoğu ilk etkinliğe tek başına gelerek yeni arkadaşlar edinmiştir.',
+      highlight: 'Bakırköy Periwinkle Cafe kapısında karşılanıp açık masalara dahil edilirsin.'
     },
     {
       number: '03',
-      title: 'Kurallar Masada Öğretilir',
-      description: 'Daha önce hayatınızda hiç kutu oyunu oynamamış olsanız bile sorun değil. Her masada oyun kurallarını sıfırdan anlatan tecrübeli moderatörlerimiz vardır.',
-      highlight: 'Soru sormaktan ve hata yapmaktan asla çekinmeyin.'
+      title: 'Kuralları Birlikte Öğrenelim',
+      description: 'Daha önce hayatında hiç Catan, Terraforming Mars veya Root oynamamış olsan bile hiç çekinme! Her masada kuralları sabırla öğreten bir arkadaşımız vardır.',
+      highlight: 'Soru sormaktan ve ilk turda hata yapmaktan asla çekinme.'
     },
     {
       number: '04',
-      title: 'Masaya Oturun & Eğlenin',
-      description: 'Çayınızı, kahvenizi alın, zarlarınızı atın ve saatlerce süren keyifli masaüstü maceralarının ve yeni dostlukların tadını çıkarın.',
-      highlight: 'İstediğiniz saatte gelip ayrılabilirsiniz.'
+      title: 'Masaya Otur ve Keyfini Çıkar',
+      description: 'Kahveni al, masadaki yerini kap ve 13:00\'ten 19:00\'a kadar keyifli oyunların, stratejilerin ve yeni dostlukların tadını çıkar.',
+      highlight: 'Dilediğin saatte gelip dilediğin saatte ayrılabilirsin.'
     }
   ];
 
   public readonly faqs: FaqItem[] = [
     {
       id: 'faq-1',
-      question: 'Daha önce hiç modern kutu oyunu veya FRP oynamadım, gelebilir miyim?',
-      answer: 'Kesinlikle evet! Masabaşı Oyun Kulübü tam olarak bu duvarı yıkmak için kuruldu. Buluşmalarımızda her masada kuralları sabırla anlatan bir moderatör veya deneyimli oyuncu bulunur. İlk defa zar atacak olanlar baş tacımızdır.'
+      question: 'Daha önce hiç modern kutu oyunu oynamadım, gelebilir miyim?',
+      answer: 'Kesinlikle evet! Masabaşı Oyun Kulübü\'nün en büyük önceliği yeni başlayanlardır. Buluşmalarımızda her masada kuralları sabırla anlatan bir moderatör veya deneyimli oyuncu bulunur. İlk defa zar atacak olanlar baş tacımızdır.'
     },
     {
       id: 'faq-2',
@@ -1162,25 +1181,25 @@ export class HomePageComponent implements OnInit {
     },
     {
       id: 'faq-3',
-      question: 'Etkinlikler ücretli mi, nasıl bir işleyiş var?',
-      answer: 'Masabaşı Oyun Kulübü kâr amacı gütmeyen bağımsız bir topluluktur. Kulüp için katılım ücreti talep edilmez. Yalnızca buluştuğumuz Kadıköy mekanının/kafesinin standart masa/giriş veya yeme-içme kuralları geçerlidir.'
+      question: 'Buluşma tam olarak nerede ve saat kaçta yapılıyor?',
+      answer: 'Her Cumartesi günü 13:00 - 19:00 saatleri arasında Bakırköy Kartaltepe Mahallesi Gençler Caddesi No:8A adresindeki Periwinkle Boardgame Cafe\'de buluşuyoruz. Mekan, Bakırköy Marmaray durağına ve Bakırköy Cumhuriyet (Özgürlük) Meydanı\'na yürüme mesafesindedir.'
     },
     {
       id: 'faq-4',
-      question: 'Kendi kutu oyunumu getirebilir miyim?',
-      answer: 'Elbette! Rafta oynanmayı bekleyen veya diğer üyelere öğretmek istediğiniz oyunlarınızı getirebilir, masanızda duyurarak diğer katılımcılarla birlikte oynayabilirsiniz.'
+      question: 'Etkinlik ücretli mi, nasıl bir kafe işleyişi var?',
+      answer: 'Masabaşı Oyun Kulübü bağımsız bir topluluktur ve kulüp üyelik ücreti almaz. Yalnızca buluştuğumuz Periwinkle Cafe\'nin standart masa/oyun kütüphanesi kullanım ve yeme-içme kuralları geçerlidir.'
     },
     {
       id: 'faq-5',
-      question: 'Buluşma nerede ve kaçta yapılıyor?',
-      answer: 'Her Cumartesi günü saat 11:00 ile 18:00+ arasında İstanbul Kadıköy merkezindeki seçkin ve ferah mekanlarda toplanıyoruz. Güncel adres detayları haftalık olarak Meetup ve Instagram üzerinden paylaşılmaktadır.'
+      question: 'Kendi kutu oyunumu getirebilir miyim?',
+      answer: 'Elbette! Evinizde rafta oynanmayı bekleyen veya diğer üyelere öğretmek istediğiniz oyunlarınızı getirebilir, masanızda duyurarak diğer katılımcılarla birlikte oynayabilirsiniz.'
     }
   ];
 
   ngOnInit(): void {
     this.seoMetaService.setMeta({
-      title: 'Masabaşı Oyun Kulübü | Kadıköy Modern Kutu Oyunları & FRP Topluluğu',
-      description: 'İstanbul Kadıköy merkezli bağımsız masaüstü oyun kulübü. Her Cumartesi modern kutu oyunları (Catan, Avalon, Terraforming Mars) ve yeni başlayanlara açık D&D 5e FRP masaları.',
+      title: 'Masabaşı Oyun Kulübü | İstanbul Bakırköy Kutu Oyunları & FRP Topluluğu',
+      description: 'İstanbul Bakırköy Periwinkle Boardgame Cafe\'de her Cumartesi 13:00 - 19:00 arası modern kutu oyunları (Catan, Terraforming Mars, Root) ve D&D 5e FRP masaları.',
       canonicalUrl: 'https://masabasikulubu.com/'
     });
 

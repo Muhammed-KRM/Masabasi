@@ -1,13 +1,13 @@
 [
   {
     "id": "33333333-3333-3333-3333-333333333301",
-    "title": "Masabaşı Cumartesi Buluşması: Kutu Oyunları & FRP Masaları",
-    "slug": "cumartesi-bulusmasi",
-    "tldrSummary": "Masabaşı Oyun Kulübü olarak bu Cumartesi Kadıköy'de modern kutu oyunları (Catan, Ticket to Ride, Avalon) ve yeni başlayanlara açık D&D 5e FRP masaları için buluşuyoruz. Kurallar masada anlatılacaktır.",
-    "startDateUtc": "2026-10-17T11:00:00Z",
-    "endDateUtc": "2026-10-17T18:00:00Z",
-    "venueName": "Kadıköy Buluşma Mekanı",
-    "venueAddress": "Kadıköy / İstanbul (Moda ve Rıhtım çevresi)",
+    "title": "İstanbul - Board Game Buluşması: Catan, Terraforming Mars, Root & Modern Kutu Oyunları",
+    "slug": "istanbul-board-game-bulusmasi-periwinkle-cafe",
+    "tldrSummary": "Masabaşı Oyun Kulübü olarak her Cumartesi Bakırköy Periwinkle Cafe'de toplanıyoruz. Catan, Terraforming Mars, Root ve çok daha fazlasını birlikte deneyimliyoruz. Kuralları masada birlikte öğreniyoruz.",
+    "startDateUtc": "2026-10-17T10:00:00Z",
+    "endDateUtc": "2026-10-17T16:00:00Z",
+    "venueName": "Periwinkle Boardgame Cafe",
+    "venueAddress": "Kartaltepe, Gençler Cad. D:8A, 34145 Bakırköy / İstanbul",
     "meetupEventUrl": "https://www.meetup.com/tr-tr/masaba%c5%9f%c4%b1-oyun-kulubu/events/316644892/",
     "externalRegistrationUrl": "https://www.instagram.com/masabasikulubu/",
     "tables": []

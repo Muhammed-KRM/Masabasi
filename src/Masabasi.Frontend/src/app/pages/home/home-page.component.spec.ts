@@ -26,9 +26,9 @@ describe('HomePageComponent', () => {
   it('should render club title and hero sections', () => {
     const el = fixture.nativeElement as HTMLElement;
     expect(el.querySelector('#hero-title')?.textContent).toContain('MASABAŞI OYUN KULÜBÜ');
-    expect(el.textContent).toContain('Kadıköy');
+    expect(el.textContent).toContain('Bakırköy');
+    expect(el.textContent).toContain('Periwinkle');
     expect(el.textContent).toContain('Modern Kutu Oyunları');
-    expect(el.textContent).toContain('D&D 5e');
   });
 
   it('should render all 4 game categories', () => {

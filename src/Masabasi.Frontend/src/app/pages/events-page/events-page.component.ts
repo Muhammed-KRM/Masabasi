@@ -126,12 +126,12 @@ import { ReservationModalComponent } from '../../shared/components/reservation-m
             <div class="walkin-card">
               <span class="walkin-eyebrow">Etkinlik Katılım Rehberi</span>
               <h2 id="walkin-title" class="walkin-card__title">
-                Masalarımız Kadıköy Mekanında Doğrudan Açık Katılımla Kurulmaktadır
+                Masalarımız Bakırköy Periwinkle Cafe'de Doğrudan Açık Katılımla Kurulmaktadır
               </h2>
               <p class="walkin-card__lead">
                 Masabaşı Oyun Kulübü haftalık buluşmalarında masalarımız, mekana gelen katılımcılarımızın
                 oyun tercihlerine göre moderatörlerimiz eşliğinde anlık ve serbest akışla kurulur.
-                Önceden koltuk rezervasyonu yapmanıza gerek yoktur.
+                Catan, Terraforming Mars, Root ve daha fazlası için önceden koltuk rezervasyonu yapmanıza gerek yoktur.
               </p>
 
               <div class="walkin-steps">
@@ -139,15 +139,15 @@ import { ReservationModalComponent } from '../../shared/components/reservation-m
                   <span class="walkin-step__icon" aria-hidden="true">🤝</span>
                   <div class="walkin-step__body">
                     <strong>1. Meetup veya Instagram'dan Katılımınızı Bildirin</strong>
-                    <p>Haftalık buluşma sayfamızdan LCV vererek veya Instagram'dan bize mesaj atarak geleceğinizi iletebilirsiniz.</p>
+                    <p>Meetup etkinliğimize LCV vererek veya Instagram (@masabasikulubu) katılım formunu doldurarak geleceğinizi bildirin.</p>
                   </div>
                 </div>
 
                 <div class="walkin-step">
                   <span class="walkin-step__icon" aria-hidden="true">📍</span>
                   <div class="walkin-step__body">
-                    <strong>2. Cumartesi Günü Saat 11:00 İtibarıyla Mekana Gelin</strong>
-                    <p>Kadıköy'deki buluşma mekanımıza ister tek başınıza ister arkadaşlarınızla gelin; kapıda sizi karşılar ve açık masalara yönlendiririz.</p>
+                    <strong>2. Cumartesi Günü Saat 13:00 İtibarıyla Mekana Gelin</strong>
+                    <p>Bakırköy Kartaltepe'deki Periwinkle Boardgame Cafe'ye gelin (Bakırköy Marmaray'a yürüme mesafesinde). Kapıda sizi karşılar ve açık masalara yönlendiririz.</p>
                   </div>
                 </div>
 
@@ -155,7 +155,7 @@ import { ReservationModalComponent } from '../../shared/components/reservation-m
                   <span class="walkin-step__icon" aria-hidden="true">🎲</span>
                   <div class="walkin-step__body">
                     <strong>3. Masaya Oturun, Kuralları Birlikte Dinleyelim</strong>
-                    <p>Oyun kurallarını bilmiyorum diye endişelenmeyin! Her masadaki moderatörlerimiz veya deneyimli oyuncular kuralları sabırla anlatır.</p>
+                    <p>Oyun kurallarını bilmiyorum diye endişelenmeyin! Masadaki arkadaşlarımız kuralları sıfırdan sabırla anlatır.</p>
                   </div>
                 </div>
               </div>
